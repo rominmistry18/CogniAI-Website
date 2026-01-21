@@ -6,6 +6,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SchemaOrg } from "@/components/SchemaOrg";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,7 +22,59 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "CogniAI by MedinovAI - AI-Powered Skill Assessment & Training",
-  description: "Enterprise-grade AI-powered skill assessment and training platform by medinovAI. Transform how organizations evaluate, develop, and track workforce capabilities with CogniAI.",
+  description: "Enterprise-grade AI-powered skill assessment and training platform by MedinovAI. Transform how organizations evaluate, develop, and track workforce capabilities with CogniAI.",
+  keywords: [
+    "AI skill assessment",
+    "talent acquisition platform",
+    "employee training software",
+    "workforce development",
+    "AI-powered hiring",
+    "skills-based talent management",
+    "human capital liquidity",
+    "AI proctoring",
+    "HR technology",
+    "enterprise AI platform"
+  ],
+  authors: [{ name: "MedinovAI" }],
+  creator: "MedinovAI",
+  publisher: "CogniAI",
+  metadataBase: new URL("https://www.cogniai.us"),
+  alternates: {
+    canonical: "https://www.cogniai.us"
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.cogniai.us",
+    siteName: "CogniAI",
+    title: "CogniAI - AI-Powered Skill Assessment & Workforce Development",
+    description: "Enterprise-grade AI platform for skill assessment, talent acquisition, training, and workforce development. Powered by GPT-4, Claude, and Gemini.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CogniAI Platform"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CogniAI - AI-Powered Skill Assessment",
+    description: "Transform workforce development with AI-powered skill assessment, training, and certification.",
+    images: ["/og-image.png"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  }
 };
 
 export default function RootLayout({
@@ -49,6 +102,7 @@ export default function RootLayout({
             data-debug="true"
             data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
           />
+          <SchemaOrg />
           <Navbar />
           <main>{children}</main>
           <Footer />

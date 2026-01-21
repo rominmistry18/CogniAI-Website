@@ -18,6 +18,12 @@ const footerLinks = {
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
+  resources: [
+    { label: "Research", href: "/research" },
+    { label: "Glossary", href: "/glossary" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Compare", href: "/compare/ai-vs-traditional-hiring" },
+  ],
   legal: [
     { label: "Security", href: "/security" },
     { label: "Compliance", href: "/compliance" },
@@ -37,7 +43,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
@@ -82,6 +88,23 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-semibold mb-4">Resources</h4>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}

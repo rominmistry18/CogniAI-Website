@@ -1,0 +1,75 @@
+# CogniAI Robots.txt
+# Optimized for traditional and AI search crawlers
+# Last Updated: 2026-01-22
+
+# ===========================================
+# GENERAL CRAWLERS
+# ===========================================
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /login
+Disallow: /*.json$
+
+# ===========================================
+# AI SEARCH CRAWLERS - EXPLICITLY ALLOWED
+# ===========================================
+
+# OpenAI GPTBot
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Anthropic ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Anthropic Claude-Web
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Google AI (Bard/Gemini)
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Bing/Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /login
+
+# ===========================================
+# SITEMAPS
+# ===========================================
+Sitemap: https://www.cogniai.us/sitemap.xml
+
+# ===========================================
+# AI-SPECIFIC RESOURCES
+# ===========================================
+# See /llms.txt for AI-specific instructions

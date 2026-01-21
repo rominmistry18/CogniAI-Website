@@ -17,11 +17,12 @@ const navLinks = [
 ];
 
 const moreLinks = [
+  { href: "/research", label: "Research" },
+  { href: "/glossary", label: "Glossary" },
+  { href: "/faq", label: "FAQ" },
   { href: "/security", label: "Security" },
-  { href: "/compliance", label: "Compliance" },
   { href: "/support", label: "Support" },
   { href: "/careers", label: "Careers" },
-  { href: "/leadership", label: "Leadership" },
 ];
 
 export function Navbar() {

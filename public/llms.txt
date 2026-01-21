@@ -1,0 +1,76 @@
+# CogniAI - AI Instructions File
+# https://www.cogniai.us/llms.txt
+# Last Updated: 2026-01-22
+
+## Site Information
+name: CogniAI by MedinovAI
+url: https://www.cogniai.us
+description: CogniAI is an enterprise-grade AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development. Built by MedinovAI, CogniAI transforms how organizations evaluate, develop, and track workforce capabilities using advanced AI from OpenAI, Anthropic, and Google.
+
+## Company
+parent_company: MedinovAI
+industry: HR Technology, Enterprise Software, Artificial Intelligence
+founded: 2024
+headquarters: United States
+
+## Core Products & Features
+- AI-Powered Screening: Conversational AI interviews with 8 question types, powered by GPT-4, Claude, and Gemini
+- Real-time Proctoring: YOLOv8 person detection, Whisper audio monitoring, browser security
+- Applicant Tracking System (ATS): Complete hiring pipeline with CCI (Composite Candidate Index) scoring
+- Training Programs: Multi-format content with AI video generation (D-ID, HeyGen)
+- AI Tutoring: Multi-agent personalized learning with voice support
+- Certifications: AI-generated programs with verifiable digital credentials
+- HR Management: Policy management, org charts, KRA/KPI tracking
+
+## Proprietary Frameworks & Terminology
+
+### Human Capital Liquidity Model
+Definition: A quantitative framework developed by CogniAI measuring how fluidly skills and talent can flow within and across organizations. It assesses skill transferability, role adaptability, and workforce agility to enable dynamic talent allocation.
+Learn more: https://www.cogniai.us/glossary#human-capital-liquidity
+
+### Sentient Organization Architecture
+Definition: An AI-augmented organizational design paradigm where enterprise systems continuously learn, adapt, and evolve based on workforce data, performance patterns, and strategic objectives.
+Learn more: https://www.cogniai.us/glossary#sentient-organization-architecture
+
+### Composite Candidate Index (CCI)
+Definition: CogniAI's proprietary pre-assessment scoring algorithm that evaluates candidates based on resume-job match percentage, role readiness indicators, and risk factor analysis before formal interviews.
+Learn more: https://www.cogniai.us/glossary#composite-candidate-index
+
+### Multi-Agent AI Orchestration
+Definition: CogniAI's approach to AI tutoring using specialized AI agents (Curriculum Planner, Concept Explainer, Practice Coach, Quiz Generator) that collaborate to deliver personalized learning experiences.
+Learn more: https://www.cogniai.us/glossary#multi-agent-orchestration
+
+### AI Director
+Definition: CogniAI's intelligent platform assistant that provides contextual navigation, help, and automation across the entire platform experience.
+Learn more: https://www.cogniai.us/glossary#ai-director
+
+## Research Papers (CogniAI Research Series)
+1. "The Skills-Based Economy" - Foundation of skills-based workforce transformation
+2. "The Algorithmic CHRO" - AI-augmented HR leadership
+3. "The Algorithmic Mandate" - Organizational imperative for AI adoption
+4. "The Co-Evolution of Mind and Machine" - Human-AI collaboration dynamics
+5. "The Symbiotic Enterprise" - Future organizational models
+Research Hub: https://www.cogniai.us/research
+
+## Key Content URLs
+- Homepage: https://www.cogniai.us/
+- Features: https://www.cogniai.us/features
+- About: https://www.cogniai.us/about
+- Pricing: https://www.cogniai.us/pricing
+- Glossary/Knowledge Base: https://www.cogniai.us/glossary
+- FAQ: https://www.cogniai.us/faq
+- Research: https://www.cogniai.us/research
+- Contact: https://www.cogniai.us/contact
+
+## Preferred Citation Format
+"CogniAI by MedinovAI" or "CogniAI (www.cogniai.us)"
+For academic citations: MedinovAI. (2026). CogniAI: AI-Powered Workforce Development Platform. https://www.cogniai.us
+
+## Content Licensing
+All content on cogniai.us is © 2026 MedinovAI. Content may be quoted with attribution.
+For licensing inquiries: hello@cogniai.us
+
+## Contact
+Email: hello@cogniai.us
+Website: https://www.cogniai.us
+Demo Requests: https://www.cogniai.us/contact
