@@ -21,8 +21,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CogniAI by MedinovAI - AI-Powered Skill Assessment & Training",
-  description: "Enterprise-grade AI-powered skill assessment and training platform by MedinovAI. Transform how organizations evaluate, develop, and track workforce capabilities with CogniAI.",
+  title: "Cognaium by MedinovAI - AI-Powered Skill Assessment & Training",
+  description: "Enterprise-grade AI-powered skill assessment and training platform by MedinovAI. Transform how organizations evaluate, develop, and track workforce capabilities with Cognaium.",
   keywords: [
     "AI skill assessment",
     "talent acquisition platform",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MedinovAI" }],
   creator: "MedinovAI",
-  publisher: "CogniAI",
+  publisher: "Cognaium",
   metadataBase: new URL("https://www.cogniai.us"),
   alternates: {
     canonical: "https://www.cogniai.us"
@@ -46,21 +46,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.cogniai.us",
-    siteName: "CogniAI",
-    title: "CogniAI - AI-Powered Skill Assessment & Workforce Development",
+    siteName: "Cognaium",
+    title: "Cognaium - AI-Powered Skill Assessment & Workforce Development",
     description: "Enterprise-grade AI platform for skill assessment, talent acquisition, training, and workforce development. Powered by GPT-4, Claude, and Gemini.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CogniAI Platform"
+        alt: "Cognaium Platform"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "CogniAI - AI-Powered Skill Assessment",
+    title: "Cognaium - AI-Powered Skill Assessment",
     description: "Transform workforce development with AI-powered skill assessment, training, and certification.",
     images: ["/og-image.png"]
   },

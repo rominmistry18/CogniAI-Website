@@ -12,7 +12,7 @@ interface ArticleMetaProps {
 }
 
 export function ArticleMeta({
-  author = "CogniAI Research Team",
+  author = "Cognaium Research Team",
   publishDate,
   lastUpdated,
   readTime,
@@ -62,7 +62,7 @@ export function ArticleMeta({
 
 // Simple footer version for end of articles
 export function ArticleFooter({
-  author = "CogniAI Research Team",
+  author = "Cognaium Research Team",
   lastUpdated
 }: {
   author?: string;

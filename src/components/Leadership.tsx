@@ -10,9 +10,9 @@ const leaders = [
       qualifications: "B.E. Mechanical Engineering",
       experience: "20+ Years Experience",
         bio: [
-          "Mayank Trivedi is a seasoned technocrat and visionary leader with over two decades of experience in the healthcare information technology sector. As the Executive Chairman of CogniAI, he brings a proven track record of scaling multinational organizations and delivering mission-critical healthcare solutions globally.",
+          "Mayank Trivedi is a seasoned technocrat and visionary leader with over two decades of experience in the healthcare information technology sector. As the Executive Chairman of Cognaium, he brings a proven track record of scaling multinational organizations and delivering mission-critical healthcare solutions globally.",
           "A Mechanical Engineering graduate from Maharaja Sayajirao University of Baroda, Mayank founded Sysware Healthcare Systems, which grew into a global leader in Laboratory Information Systems and was acquired by Eclipsys Corporation (now part of Allscripts). He subsequently served as President of Eclipsys India, where he led the expansion of operations to over 700 professionals.",
-          "Currently serving as the CEO of myOnsite Healthcare, Mayank leads the strategic integration of CogniAI within the broader MedinovAI ecosystem, focusing on pioneering AI-driven workforce intelligence for clinical environments. His unique blend of engineering excellence and deep healthcare domain expertise ensures CogniAI remains at the forefront of technological innovation."
+          "Currently serving as the CEO of myOnsite Healthcare, Mayank leads the strategic integration of Cognaium within the broader MedinovAI ecosystem, focusing on pioneering AI-driven workforce intelligence for clinical environments. His unique blend of engineering excellence and deep healthcare domain expertise ensures Cognaium remains at the forefront of technological innovation."
         ],
       highlights: [
         { icon: Target, label: "Strategic Vision" },
@@ -29,7 +29,7 @@ const leaders = [
     bio: [
       "Harita Oza, our Chief Executive Officer, is a distinguished leader whose academic prowess—holding both an M.Com and an MBA—is matched by her formidable track record in the corporate world. With over 8 years of high-impact experience managing multi-national operations across diverse markets, she has become a master architect of organizational scaling and operational efficiency.",
       "Her professional journey is marked by a unique fusion of financial acumen and strategic foresight. Harita has successfully navigated complex global landscapes, spearheading financial transformations and strategic expansion initiatives that have consistently delivered sustainable growth.",
-      "A specialist in driving strategic expansion and fostering cross-functional excellence, Harita is dedicated to building robust frameworks that bridge the gap between technological innovation and financial stability. Under her visionary leadership, CogniAI is pioneering the next generation of AI-driven workforce intelligence."
+      "A specialist in driving strategic expansion and fostering cross-functional excellence, Harita is dedicated to building robust frameworks that bridge the gap between technological innovation and financial stability. Under her visionary leadership, Cognaium is pioneering the next generation of AI-driven workforce intelligence."
     ],
     highlights: [
       { icon: Globe, label: "Global Operations" },
@@ -44,7 +44,7 @@ const leaders = [
     qualifications: "HR, Law & Commerce",
     experience: "40+ Years Experience",
     bio: [
-      "Mr. Bharat Mehta is a seasoned HR leader with over four decades of experience across leading Indian and multinational organizations. With academic qualifications in HR & Social Sciences, Law, and Commerce from MS University, he brings a rare blend of strategic people leadership, general management, and social commitment to CogniAI.",
+      "Mr. Bharat Mehta is a seasoned HR leader with over four decades of experience across leading Indian and multinational organizations. With academic qualifications in HR & Social Sciences, Law, and Commerce from MS University, he brings a rare blend of strategic people leadership, general management, and social commitment to Cognaium.",
       "His illustrious career includes senior leadership roles such as Director–HR at Allscripts India, Head–HR at Medtronic (Southeast Asia), GM–Corporate HR at Mafatlal Industries, and COO at Talent Anywhere. He is widely respected for CXO-level talent acquisition, organizational structuring, and HR transformation.",
       "Beyond corporate leadership, Mr. Mehta is deeply committed to societal well-being, serving as Chairperson of Friends Society and leading impactful CSR initiatives like rebuilding schools and supporting community health. His people-centric leadership and extensive professional network continue to inspire our commitment to organizational excellence and social responsibility."
     ],
@@ -64,7 +64,7 @@ export function Leadership() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Visionary <span className="gradient-text">Leadership</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet the driving force behind CogniAI by MedinovAI's mission to revolutionize workforce intelligence.
+              Meet the driving force behind Cognaium by MedinovAI's mission to revolutionize workforce intelligence.
             </p>
           </div>
 

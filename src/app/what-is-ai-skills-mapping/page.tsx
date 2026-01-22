@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "What is AI Skills Mapping? | CogniAI",
-  description: "AI Skills Mapping uses artificial intelligence to automatically identify, categorize, and validate workforce skills. Learn how AI transforms skill management with CogniAI.",
+  title: "What is AI Skills Mapping? | Cognaium",
+  description: "AI Skills Mapping uses artificial intelligence to automatically identify, categorize, and validate workforce skills. Learn how AI transforms skill management with Cognaium.",
   keywords: ["AI skills mapping", "skill mapping software", "AI skill assessment", "workforce skills analysis", "automated skill identification"],
   alternates: {
     canonical: "https://www.cogniai.us/what-is-ai-skills-mapping"
@@ -41,7 +41,7 @@ export default function WhatIsAISkillsMappingPage() {
         description="Comprehensive guide to AI Skills Mapping - how AI transforms skill identification and workforce planning."
         datePublished="2025-08-10"
         dateModified="2026-01-22"
-        author="CogniAI by MedinovAI"
+        author="Cognaium by MedinovAI"
         url="https://www.cogniai.us/what-is-ai-skills-mapping"
       />
       <HowToSchema
@@ -222,10 +222,10 @@ export default function WhatIsAISkillsMappingPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <Brain className="w-7 h-7 text-primary" />
-                AI Skills Mapping with CogniAI
+                AI Skills Mapping with Cognaium
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                CogniAI's platform includes comprehensive AI skills mapping capabilities:
+                Cognaium's platform includes comprehensive AI skills mapping capabilities:
               </p>
               <ul className="space-y-3 my-6">
                 {[
@@ -272,7 +272,7 @@ export default function WhatIsAISkillsMappingPage() {
               <h3 className="font-bold">See AI Skills Mapping in Action</h3>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              Request a demo to see how CogniAI's AI-powered skills mapping can transform your workforce visibility.
+              Request a demo to see how Cognaium's AI-powered skills mapping can transform your workforce visibility.
             </p>
             <Link href="/contact">
               <Button className="gap-2">
@@ -284,7 +284,7 @@ export default function WhatIsAISkillsMappingPage() {
 
           {/* Meta Footer */}
           <div className="mt-8 pt-6 border-t border-border text-sm text-muted-foreground">
-            <p>Last Updated: January 22, 2026 | Author: CogniAI Research Team</p>
+            <p>Last Updated: January 22, 2026 | Author: Cognaium Research Team</p>
           </div>
         </div>
       </section>

@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "AI vs Traditional Hiring: Complete Comparison | CogniAI",
-  description: "Compare AI-powered hiring with traditional recruitment methods. Learn the differences in speed, cost, accuracy, and candidate experience. See why organizations choose CogniAI.",
+  title: "AI vs Traditional Hiring: Complete Comparison | Cognaium",
+  description: "Compare AI-powered hiring with traditional recruitment methods. Learn the differences in speed, cost, accuracy, and candidate experience. See why organizations choose Cognaium.",
   keywords: ["AI hiring vs traditional hiring", "AI recruitment comparison", "automated hiring benefits", "AI screening advantages", "hiring technology ROI"],
   alternates: {
     canonical: "https://www.cogniai.us/compare/ai-vs-traditional-hiring"
@@ -128,7 +128,7 @@ export default function CompareAIvsTraditionalPage() {
         description="Comprehensive comparison of AI-powered hiring versus traditional recruitment methods covering speed, cost, accuracy, and candidate experience."
         datePublished="2025-09-15"
         dateModified="2026-01-22"
-        author="CogniAI by MedinovAI"
+        author="Cognaium by MedinovAI"
         url="https://www.cogniai.us/compare/ai-vs-traditional-hiring"
       />
 
@@ -150,7 +150,7 @@ export default function CompareAIvsTraditionalPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Side-by-Side Comparison</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              How AI-powered hiring with CogniAI compares to traditional recruitment across key metrics.
+              How AI-powered hiring with Cognaium compares to traditional recruitment across key metrics.
             </p>
           </div>
 
@@ -178,7 +178,7 @@ export default function CompareAIvsTraditionalPage() {
                       <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
                         <item.aiPowered.icon className="w-4 h-4 text-green-500" />
                       </div>
-                      <span className="text-sm font-medium text-green-600">AI-Powered (CogniAI)</span>
+                    <span className="text-sm font-medium text-green-600">AI-Powered (Cognaium)</span>
                     </div>
                     <p className="text-xl font-bold mb-2 text-green-600">{item.aiPowered.value}</p>
                     <p className="text-sm text-muted-foreground">{item.aiPowered.details}</p>
@@ -292,11 +292,11 @@ export default function CompareAIvsTraditionalPage() {
         </div>
       </section>
 
-      {/* CogniAI Features */}
+      {/* Cognaium Features */}
       <section className="py-16 bg-card/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How CogniAI Delivers AI Hiring Advantages</h2>
+            <h2 className="text-3xl font-bold mb-4">How Cognaium Delivers AI Hiring Advantages</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Purpose-built features that transform your hiring process.
             </p>
@@ -352,7 +352,7 @@ export default function CompareAIvsTraditionalPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Hiring?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            See how CogniAI can reduce your time-to-hire, cut costs, and improve hiring quality with AI-powered screening and assessment.
+            See how Cognaium can reduce your time-to-hire, cut costs, and improve hiring quality with AI-powered screening and assessment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
@@ -373,7 +373,7 @@ export default function CompareAIvsTraditionalPage() {
       {/* Meta Footer */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <div className="text-sm text-muted-foreground text-center">
-          Last Updated: January 22, 2026 | Author: CogniAI Research Team
+          Last Updated: January 22, 2026 | Author: Cognaium Research Team
         </div>
       </div>
 

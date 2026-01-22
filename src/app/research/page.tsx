@@ -11,7 +11,7 @@ const researchPapers = [
   {
     id: 1,
     title: "The Skills-Based Economy: Redefining Work in the Age of AI",
-    series: "Part 1 of 5 in the CogniAI Research Series",
+    series: "Part 1 of 5 in the Cognaium Research Series",
     description: "This foundational paper explores how the traditional job-based economy is giving way to a skills-based model where capabilities matter more than credentials. We examine the forces driving this transformation—AI automation, gig economy growth, and accelerating skill obsolescence—and present a framework for organizations to navigate the transition.",
     keyInsights: [
       "Why traditional job architectures are becoming obsolete",
@@ -30,7 +30,7 @@ const researchPapers = [
   {
     id: 2,
     title: "The Algorithmic CHRO: AI-Augmented Human Resources Leadership",
-    series: "Part 2 of 5 in the CogniAI Research Series",
+    series: "Part 2 of 5 in the Cognaium Research Series",
     description: "As AI capabilities expand, the role of HR leadership is fundamentally changing. This paper examines how CHROs can leverage algorithmic intelligence to make better strategic decisions about talent acquisition, development, and deployment—while maintaining the human judgment essential for ethical and effective people management.",
     keyInsights: [
       "The evolution from data-driven to AI-augmented HR",
@@ -49,7 +49,7 @@ const researchPapers = [
   {
     id: 3,
     title: "The Algorithmic Mandate: Why Organizations Must Embrace AI-Powered Talent Management",
-    series: "Part 3 of 5 in the CogniAI Research Series",
+    series: "Part 3 of 5 in the Cognaium Research Series",
     description: "This paper makes the business case for AI adoption in talent management, presenting evidence that organizations delaying AI implementation face growing competitive disadvantages. We analyze the costs of inaction, identify critical adoption thresholds, and provide a roadmap for responsible AI integration in workforce practices.",
     keyInsights: [
       "Competitive dynamics forcing AI adoption in HR",
@@ -68,7 +68,7 @@ const researchPapers = [
   {
     id: 4,
     title: "The Co-Evolution of Mind and Machine: Human-AI Collaboration in the Workplace",
-    series: "Part 4 of 5 in the CogniAI Research Series",
+    series: "Part 4 of 5 in the Cognaium Research Series",
     description: "Human-AI collaboration is reshaping how work gets done. This paper explores the dynamics of cognitive partnership between humans and AI systems, examining how each enhances the other's capabilities. We present models for effective human-AI teaming and address the psychological and organizational factors that enable productive collaboration.",
     keyInsights: [
       "Cognitive complementarity: human and AI strengths",
@@ -87,7 +87,7 @@ const researchPapers = [
   {
     id: 5,
     title: "The Symbiotic Enterprise: Organizational Design for the AI Era",
-    series: "Part 5 of 5 in the CogniAI Research Series",
+    series: "Part 5 of 5 in the Cognaium Research Series",
     description: "The concluding paper in our series envisions the symbiotic enterprise—an organizational model where humans and AI systems work in mutually beneficial partnership. We explore how organizational structures, culture, and governance must evolve to support this symbiosis, creating value greater than either humans or AI could achieve independently.",
     keyInsights: [
       "Characteristics of symbiotic organizations",
@@ -130,7 +130,7 @@ export default function ResearchPage() {
   return (
     <main className="min-h-screen">
       <PageHeader 
-        title="CogniAI Research" 
+        title="Cognaium Research" 
         description="Thought leadership on AI-powered workforce development, skills-based organizations, and the future of work."
       />
 
@@ -142,7 +142,7 @@ export default function ResearchPage() {
           description={paper.description}
           datePublished={paper.publishDate}
           dateModified={paper.lastUpdated}
-          author="CogniAI by MedinovAI"
+          author="Cognaium by MedinovAI"
           url={`https://www.cogniai.us/research#paper-${paper.id}`}
         />
       ))}
@@ -155,7 +155,7 @@ export default function ResearchPage() {
               Featured Research Series
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              The CogniAI Research Series
+              The Cognaium Research Series
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               A comprehensive five-part exploration of how artificial intelligence is transforming workforce development, organizational design, and the future of work. Each paper builds on the previous, creating a complete framework for understanding and navigating the AI-powered workplace.
@@ -316,13 +316,13 @@ export default function ResearchPage() {
                 <User className="w-7 h-7 text-primary" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">About CogniAI Research</h2>
+                <h2 className="text-2xl font-bold">About Cognaium Research</h2>
                 <p className="text-muted-foreground">Research Team</p>
               </div>
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              The CogniAI Research team produces original research on the intersection of artificial intelligence and workforce development. Our work draws on data from the CogniAI platform, partnerships with academic institutions, and analysis of industry trends to provide actionable insights for HR leaders and organizational strategists.
+              The Cognaium Research team produces original research on the intersection of artificial intelligence and workforce development. Our work draws on data from the Cognaium platform, partnerships with academic institutions, and analysis of industry trends to provide actionable insights for HR leaders and organizational strategists.
             </p>
 
             <p className="text-muted-foreground leading-relaxed mb-8">

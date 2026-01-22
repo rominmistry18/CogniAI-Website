@@ -9,7 +9,7 @@ const journeys = [
     icon: Building2,
     title: "For Enterprises",
     subtitle: "Scale Your Workforce Intelligence",
-    description: "Multi-tenant architecture with white-labeling, custom branding, and complete data isolation. Deploy CogniAI across departments with role-based access control.",
+    description: "Multi-tenant architecture with white-labeling, custom branding, and complete data isolation. Deploy Cognaium across departments with role-based access control.",
     features: [
       "Multi-tenant deployment with subdomain routing",
       "White-label branding and custom themes",
@@ -110,7 +110,7 @@ export function Journeys() {
             <span className="gradient-text block">Organization</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            CogniAI adapts to your industry needs with specialized workflows, compliance features, and domain-specific capabilities.
+            Cognaium adapts to your industry needs with specialized workflows, compliance features, and domain-specific capabilities.
           </p>
         </div>
 

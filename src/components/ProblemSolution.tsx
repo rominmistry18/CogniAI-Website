@@ -98,14 +98,14 @@ export function ProblemSolution() {
         {/* Solutions Section */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-accent/10 text-accent mb-4">
-            The CogniAI Solution
+            The Cognaium Solution
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             AI-Powered Intelligence
             <span className="gradient-text block">For Every Stage</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From hiring to development, CogniAI brings intelligent automation and actionable insights to your entire talent lifecycle.
+            From hiring to development, Cognaium brings intelligent automation and actionable insights to your entire talent lifecycle.
           </p>
         </div>
 

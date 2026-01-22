@@ -21,7 +21,7 @@ export default function CompliancePage() {
                 <h2 className="text-2xl font-bold">HIPAA Compliance</h2>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                CogniAI is designed to be fully compliant with the Health Insurance Portability and Accountability Act (HIPAA). We implement all necessary administrative, physical, and technical safeguards to protect Protected Health Information (PHI).
+                Cognaium is designed to be fully compliant with the Health Insurance Portability and Accountability Act (HIPAA). We implement all necessary administrative, physical, and technical safeguards to protect Protected Health Information (PHI).
               </p>
               <ul className="space-y-3">
                 {[

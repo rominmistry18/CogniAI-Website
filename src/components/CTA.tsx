@@ -28,7 +28,7 @@ export function CTA() {
           </h2>
           
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Join leading organizations using CogniAI for intelligent skill assessment, hiring, and employee development. Start your free trial or schedule a demo.
+              Join leading organizations using Cognaium for intelligent skill assessment, hiring, and employee development. Start your free trial or schedule a demo.
             </p>
 
 

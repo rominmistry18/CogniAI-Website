@@ -33,7 +33,7 @@ export default function CareersPage() {
             {/* Culture Section */}
             <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-bold mb-6 font-heading">Why CogniAI?</h2>
+                <h2 className="text-3xl font-bold mb-6 font-heading">Why Cognaium?</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Work at the intersection of AI innovation and workforce transformation. We're building the platform that helps organizations hire better, train smarter, and develop their teams with intelligence.
                 </p>

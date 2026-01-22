@@ -111,7 +111,7 @@ export default function SecurityPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Multi-Tenant Architecture</h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  CogniAI operates on a true multi-tenant architecture where each organization's data is completely isolated. We use tenant-specific identifiers at every layer of the stack to ensure data never crosses organizational boundaries.
+                  Cognaium operates on a true multi-tenant architecture where each organization's data is completely isolated. We use tenant-specific identifiers at every layer of the stack to ensure data never crosses organizational boundaries.
                 </p>
                 
                 <div className="space-y-4">

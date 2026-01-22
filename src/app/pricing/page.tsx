@@ -347,7 +347,7 @@ export default function PricingPage() {
             Ready to Get Started?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Start your free trial today or schedule a demo to see CogniAI in action.
+            Start your free trial today or schedule a demo to see Cognaium in action.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/login">

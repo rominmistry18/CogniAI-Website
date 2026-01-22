@@ -13,7 +13,7 @@ const glossaryTerms = [
     category: "Framework",
     icon: Users,
     shortDefinition: "A quantitative framework measuring how fluidly skills and talent can flow within and across organizations.",
-    fullDefinition: "Human Capital Liquidity is a quantitative framework developed by CogniAI that measures how fluidly skills and talent can flow within and across organizations. It assesses skill transferability, role adaptability, and workforce agility to enable dynamic talent allocation. Organizations with high human capital liquidity can rapidly redeploy talent to meet changing business needs, reduce hiring costs, and maintain competitive advantage in fast-moving markets.",
+    fullDefinition: "Human Capital Liquidity is a quantitative framework developed by Cognaium that measures how fluidly skills and talent can flow within and across organizations. It assesses skill transferability, role adaptability, and workforce agility to enable dynamic talent allocation. Organizations with high human capital liquidity can rapidly redeploy talent to meet changing business needs, reduce hiring costs, and maintain competitive advantage in fast-moving markets.",
     relatedTerms: ["Skills-Based Talent Management", "Skill Taxonomy", "Workforce Agility"],
     learnMore: "/what-is-human-capital-liquidity"
   },
@@ -32,8 +32,8 @@ const glossaryTerms = [
     term: "Composite Candidate Index (CCI)",
     category: "Scoring",
     icon: Target,
-    shortDefinition: "CogniAI's proprietary pre-assessment scoring algorithm for evaluating candidates before interviews.",
-    fullDefinition: "The Composite Candidate Index (CCI) is CogniAI's proprietary pre-assessment scoring algorithm that evaluates candidates based on three key dimensions: resume-job match percentage (how well skills and experience align with requirements), role readiness indicators (indicators of immediate contribution potential), and risk factor analysis (potential concerns or gaps). CCI helps recruiters prioritize candidates before investing time in formal interviews.",
+    shortDefinition: "Cognaium's proprietary pre-assessment scoring algorithm for evaluating candidates before interviews.",
+    fullDefinition: "The Composite Candidate Index (CCI) is Cognaium's proprietary pre-assessment scoring algorithm that evaluates candidates based on three key dimensions: resume-job match percentage (how well skills and experience align with requirements), role readiness indicators (indicators of immediate contribution potential), and risk factor analysis (potential concerns or gaps). CCI helps recruiters prioritize candidates before investing time in formal interviews.",
     relatedTerms: ["AI Screening", "Resume Parsing", "Talent Pool"],
     learnMore: "/features"
   },
@@ -42,8 +42,8 @@ const glossaryTerms = [
     term: "Multi-Agent AI Orchestration",
     category: "Technology",
     icon: Layers,
-    shortDefinition: "CogniAI's approach to AI tutoring using specialized AI agents that collaborate for personalized learning.",
-    fullDefinition: "Multi-Agent AI Orchestration is CogniAI's approach to AI-powered tutoring where multiple specialized AI agents work together to deliver personalized learning experiences. The system includes: Curriculum Planner (designs learning paths), Concept Explainer (breaks down complex topics), Practice Coach (guides hands-on exercises), and Quiz Generator (creates assessments). Each agent specializes in a specific aspect of learning, coordinating seamlessly to adapt to individual learning styles and pace.",
+    shortDefinition: "Cognaium's approach to AI tutoring using specialized AI agents that collaborate for personalized learning.",
+    fullDefinition: "Multi-Agent AI Orchestration is Cognaium's approach to AI-powered tutoring where multiple specialized AI agents work together to deliver personalized learning experiences. The system includes: Curriculum Planner (designs learning paths), Concept Explainer (breaks down complex topics), Practice Coach (guides hands-on exercises), and Quiz Generator (creates assessments). Each agent specializes in a specific aspect of learning, coordinating seamlessly to adapt to individual learning styles and pace.",
     relatedTerms: ["AI Tutoring", "Personalized Learning", "Skill Gap Analysis"],
     learnMore: "/features"
   },
@@ -52,8 +52,8 @@ const glossaryTerms = [
     term: "AI Director",
     category: "Product Feature",
     icon: MessageSquare,
-    shortDefinition: "CogniAI's intelligent platform assistant providing contextual navigation, help, and automation.",
-    fullDefinition: "The AI Director is CogniAI's intelligent platform assistant that provides contextual navigation, help, and automation across the entire platform experience. It understands user intent, answers questions about platform features, guides users through complex workflows, and can automate repetitive tasks. The AI Director learns from usage patterns to provide increasingly personalized assistance over time.",
+    shortDefinition: "Cognaium's intelligent platform assistant providing contextual navigation, help, and automation.",
+    fullDefinition: "The AI Director is Cognaium's intelligent platform assistant that provides contextual navigation, help, and automation across the entire platform experience. It understands user intent, answers questions about platform features, guides users through complex workflows, and can automate repetitive tasks. The AI Director learns from usage patterns to provide increasingly personalized assistance over time.",
     relatedTerms: ["Platform Navigation", "User Experience", "AI Automation"],
     learnMore: "/features"
   },
@@ -63,7 +63,7 @@ const glossaryTerms = [
     category: "Methodology",
     icon: Award,
     shortDefinition: "An approach to workforce management that prioritizes skills over traditional job titles and credentials.",
-    fullDefinition: "Skills-Based Talent Management is an approach to workforce management that prioritizes skills, competencies, and capabilities over traditional job titles, degrees, and credentials. This methodology enables organizations to: identify hidden talent within their workforce, create more inclusive hiring practices, build flexible career pathways, and respond faster to changing skill demands. CogniAI's platform is built on skills-based principles throughout.",
+    fullDefinition: "Skills-Based Talent Management is an approach to workforce management that prioritizes skills, competencies, and capabilities over traditional job titles, degrees, and credentials. This methodology enables organizations to: identify hidden talent within their workforce, create more inclusive hiring practices, build flexible career pathways, and respond faster to changing skill demands. Cognaium's platform is built on skills-based principles throughout.",
     relatedTerms: ["Human Capital Liquidity", "Skill Taxonomy", "Career Pathways"],
     learnMore: "/what-is-skills-based-talent-management"
   },
@@ -83,7 +83,7 @@ const glossaryTerms = [
     category: "Framework",
     icon: Layers,
     shortDefinition: "A hierarchical classification system that organizes skills into categories, subcategories, and proficiency levels.",
-    fullDefinition: "A Skill Taxonomy is a hierarchical classification system that organizes skills into categories, subcategories, and proficiency levels. CogniAI uses industry-standard taxonomies enhanced with AI to provide consistent skill language across the organization, enable meaningful skill comparisons, support career path planning, and align individual skills with organizational capabilities. The taxonomy continuously evolves as new skills emerge.",
+    fullDefinition: "A Skill Taxonomy is a hierarchical classification system that organizes skills into categories, subcategories, and proficiency levels. Cognaium uses industry-standard taxonomies enhanced with AI to provide consistent skill language across the organization, enable meaningful skill comparisons, support career path planning, and align individual skills with organizational capabilities. The taxonomy continuously evolves as new skills emerge.",
     relatedTerms: ["AI Skills Mapping", "Skills-Based Talent Management", "Career Pathways"],
     learnMore: "/features"
   },
@@ -113,7 +113,7 @@ const glossaryTerms = [
     category: "Product Feature",
     icon: Shield,
     shortDefinition: "Real-time monitoring of assessments using AI to ensure integrity and prevent cheating.",
-    fullDefinition: "AI Proctoring in CogniAI uses advanced computer vision and audio analysis to ensure assessment integrity. The system includes AI-powered person detection (identifies multiple people), audio monitoring (detects speech and suspicious sounds), browser security enforcement (prevents tab switching and copy-paste), and violation logging with severity levels. Configurable thresholds allow organizations to balance security with candidate experience.",
+    fullDefinition: "AI Proctoring in Cognaium uses advanced computer vision and audio analysis to ensure assessment integrity. The system includes AI-powered person detection (identifies multiple people), audio monitoring (detects speech and suspicious sounds), browser security enforcement (prevents tab switching and copy-paste), and violation logging with severity levels. Configurable thresholds allow organizations to balance security with candidate experience.",
     relatedTerms: ["AI Screening", "Assessment Integrity", "Violation Detection"],
     learnMore: "/features"
   },
@@ -123,7 +123,7 @@ const glossaryTerms = [
     category: "Concept",
     icon: Zap,
     shortDefinition: "An organization's ability to rapidly adapt its workforce to changing business needs and market conditions.",
-    fullDefinition: "Workforce Agility measures an organization's ability to rapidly adapt its workforce to changing business needs and market conditions. High workforce agility requires: clear visibility into current skills, ability to quickly redeploy talent, efficient reskilling programs, and flexible organizational structures. CogniAI enhances workforce agility through AI-powered skills mapping, personalized learning paths, and dynamic talent recommendations.",
+    fullDefinition: "Workforce Agility measures an organization's ability to rapidly adapt its workforce to changing business needs and market conditions. High workforce agility requires: clear visibility into current skills, ability to quickly redeploy talent, efficient reskilling programs, and flexible organizational structures. Cognaium enhances workforce agility through AI-powered skills mapping, personalized learning paths, and dynamic talent recommendations.",
     relatedTerms: ["Human Capital Liquidity", "Skills-Based Talent Management", "Organizational Design"],
     learnMore: "/about"
   }
@@ -135,7 +135,7 @@ export default function GlossaryPage() {
   return (
     <main className="min-h-screen">
       <PageHeader 
-        title="CogniAI Glossary" 
+        title="Cognaium Glossary" 
         description="Comprehensive definitions of key concepts, frameworks, and terminology in AI-powered workforce development."
       />
 
@@ -175,7 +175,7 @@ export default function GlossaryPage() {
               <span className="text-sm text-muted-foreground">Last Updated: January 22, 2026</span>
             </div>
             <p className="text-muted-foreground">
-              This glossary provides authoritative definitions for key terms and concepts used throughout CogniAI and the broader field of AI-powered workforce development. Each definition represents CogniAI's perspective based on our research and platform capabilities.
+              This glossary provides authoritative definitions for key terms and concepts used throughout Cognaium and the broader field of AI-powered workforce development. Each definition represents Cognaium's perspective based on our research and platform capabilities.
             </p>
           </div>
 
@@ -255,7 +255,7 @@ export default function GlossaryPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">About This Glossary</h2>
           <p className="text-muted-foreground mb-6">
-            This glossary is maintained by the CogniAI research team as part of our commitment to advancing the field of AI-powered workforce development. Definitions are based on our proprietary research, including the five-part CogniAI Research Series on the future of work.
+            This glossary is maintained by the Cognaium research team as part of our commitment to advancing the field of AI-powered workforce development. Definitions are based on our proprietary research, including the five-part Cognaium Research Series on the future of work.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/research">

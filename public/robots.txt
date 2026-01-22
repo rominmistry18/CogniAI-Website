@@ -1,4 +1,4 @@
-# CogniAI Robots.txt
+# Cognaium Robots.txt
 # Optimized for traditional and AI search crawlers
 # Last Updated: 2026-01-22
 

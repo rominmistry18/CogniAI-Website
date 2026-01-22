@@ -91,7 +91,7 @@ export function TrustSecurity() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Compliance & Certifications</h3>
               <p className="text-muted-foreground mb-8">
-                CogniAI is designed to meet the most stringent compliance requirements across industries. Our infrastructure supports healthcare, finance, and government deployments.
+                Cognaium is designed to meet the most stringent compliance requirements across industries. Our infrastructure supports healthcare, finance, and government deployments.
               </p>
               
               <div className="space-y-4">

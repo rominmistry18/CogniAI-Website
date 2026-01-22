@@ -41,7 +41,7 @@ export default function ContactPage() {
           </div>
           <h2 className="text-3xl font-bold">Message Sent!</h2>
           <p className="text-muted-foreground">
-            Thank you for reaching out. A member of the CogniAI team will contact you shortly to discuss your request.
+            Thank you for reaching out. A member of the Cognaium team will contact you shortly to discuss your request.
           </p>
           <Button onClick={() => setIsSubmitted(false)} variant="outline" className="w-full">
             Send another message
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <span className="gradient-text block">Conversation</span>
             </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Request a demo, ask questions, or discuss how CogniAI by MedinovAI can transform your workforce development.
+                Request a demo, ask questions, or discuss how Cognaium by MedinovAI can transform your workforce development.
               </p>
           </div>
 

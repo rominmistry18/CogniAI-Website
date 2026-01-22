@@ -6,8 +6,8 @@ import Script from "next/script";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "CogniAI",
-  "alternateName": "CogniAI by MedinovAI",
+  "name": "Cognaium",
+  "alternateName": "Cognaium by MedinovAI",
   "url": "https://www.cogniai.us",
   "logo": "https://www.cogniai.us/logo.png",
   "description": "Enterprise-grade AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development.",
@@ -36,7 +36,7 @@ const organizationSchema = {
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "CogniAI",
+  "name": "Cognaium",
   "applicationCategory": "BusinessApplication",
   "applicationSubCategory": "Human Resources Software",
   "operatingSystem": "Web-based",
@@ -67,8 +67,8 @@ const softwareSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "CogniAI",
-  "alternateName": "CogniAI by MedinovAI",
+  "name": "Cognaium",
+  "alternateName": "Cognaium by MedinovAI",
   "url": "https://www.cogniai.us",
   "description": "AI-powered platform for skill assessment, talent acquisition, and workforce development",
   "potentialAction": {
@@ -156,7 +156,7 @@ export function ArticleSchema({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "CogniAI by MedinovAI",
+      "name": "Cognaium by MedinovAI",
       "url": "https://www.cogniai.us"
     },
     "url": url
@@ -221,7 +221,7 @@ export function DefinedTermSchema({
     "url": url,
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
-      "name": "CogniAI Glossary",
+      "name": "Cognaium Glossary",
       "url": "https://www.cogniai.us/glossary"
     }
   };

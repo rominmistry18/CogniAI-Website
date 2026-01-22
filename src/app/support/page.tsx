@@ -16,7 +16,7 @@ export default function SupportPage() {
     {
       icon: MessageSquare,
       title: "Request a Demo",
-      description: "See CogniAI in action with a personalized walkthrough tailored to your needs.",
+      description: "See Cognaium in action with a personalized walkthrough tailored to your needs.",
       action: "Book Demo",
       href: "/contact",
       color: "accent"
@@ -50,33 +50,33 @@ export default function SupportPage() {
     {
       icon: Users,
       title: "Community",
-      description: "Connect with other CogniAI users to share tips and best practices."
+      description: "Connect with other Cognaium users to share tips and best practices."
     }
   ];
 
   const faqs = [
     {
-      q: "How do I get started with CogniAI?",
+      q: "How do I get started with Cognaium?",
       a: "The best way to start is by requesting a demo. Our team will guide you through the platform, help set up your organization, and configure initial assessments."
     },
     {
-      q: "What AI providers does CogniAI support?",
-      a: "CogniAI supports multiple AI providers including OpenAI GPT-4, Anthropic Claude, and Google Gemini. Enterprise customers can also integrate custom or fine-tuned models."
+      q: "What AI providers does Cognaium support?",
+      a: "Cognaium supports multiple AI providers including OpenAI GPT-4, Anthropic Claude, and Google Gemini. Enterprise customers can also integrate custom or fine-tuned models."
     },
     {
-      q: "Is CogniAI HIPAA compliant?",
-      a: "Yes, CogniAI is designed with HIPAA compliance at its core. We offer Business Associate Agreements (BAA) for healthcare organizations handling PHI."
+      q: "Is Cognaium HIPAA compliant?",
+      a: "Yes, Cognaium is designed with HIPAA compliance at its core. We offer Business Associate Agreements (BAA) for healthcare organizations handling PHI."
     },
     {
-      q: "Can I use CogniAI for my existing employees?",
-      a: "Absolutely! CogniAI supports both candidate assessment and employee development. You can use it for skill assessments, training programs, certifications, and performance tracking."
+      q: "Can I use Cognaium for my existing employees?",
+      a: "Absolutely! Cognaium supports both candidate assessment and employee development. You can use it for skill assessments, training programs, certifications, and performance tracking."
     },
     {
       q: "How does the proctoring system work?",
       a: "Our proctoring system uses AI-powered person detection and audio monitoring. It can detect multiple persons, track faces, monitor for suspicious sounds, and enforce browser security. Settings are fully configurable per assessment."
     },
     {
-      q: "Can CogniAI integrate with my existing systems?",
+      q: "Can Cognaium integrate with my existing systems?",
       a: "Yes, we offer REST APIs for integration with HRIS, LMS, and other enterprise systems. Enterprise customers can also get custom integrations built by our team."
     },
     {
@@ -93,7 +93,7 @@ export default function SupportPage() {
     <main className="min-h-screen pt-20">
       <PageHeader 
         title="Support Center" 
-        description="We're here to help you get the most out of CogniAI. Find answers, resources, and ways to connect with our team."
+        description="We're here to help you get the most out of Cognaium. Find answers, resources, and ways to connect with our team."
       />
       
       <section className="py-20">
@@ -124,7 +124,7 @@ export default function SupportPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Resources</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Everything you need to get the most out of CogniAI.
+                Everything you need to get the most out of Cognaium.
               </p>
             </div>
 

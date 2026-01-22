@@ -28,7 +28,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "Foundation", title: "Platform Genesis", description: "CogniAI was born from the vision to revolutionize how organizations assess and develop talent." },
+  { year: "Foundation", title: "Platform Genesis", description: "Cognaium was born from the vision to revolutionize how organizations assess and develop talent." },
   { year: "Growth", title: "Multi-Tenant Architecture", description: "Launched enterprise-ready multi-tenant platform with white-labeling and subdomain routing." },
   { year: "Innovation", title: "AI Tutoring System", description: "Introduced multi-agent AI tutoring with voice support and personalized learning paths." },
   { year: "Scale", title: "Full HR Suite", description: "Expanded to complete HR management with ATS, certifications, and advanced analytics." }
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 <span className="gradient-text block">Intelligent Assessment</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe that every organization deserves access to enterprise-grade AI tools for talent management. CogniAI democratizes intelligent workforce development, making sophisticated assessment, training, and analytics accessible to organizations of all sizes.
+                We believe that every organization deserves access to enterprise-grade AI tools for talent management. Cognaium democratizes intelligent workforce development, making sophisticated assessment, training, and analytics accessible to organizations of all sizes.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our platform combines the power of multiple AI providers—OpenAI GPT-4, Anthropic Claude, and Google Gemini—with robust enterprise features like multi-tenant architecture, real-time proctoring, and comprehensive analytics.

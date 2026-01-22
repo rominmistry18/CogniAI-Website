@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "What is Skills-Based Talent Management? | CogniAI",
-  description: "Skills-Based Talent Management prioritizes skills over job titles. Learn how this approach transforms hiring, development, and workforce planning with CogniAI.",
+  title: "What is Skills-Based Talent Management? | Cognaium",
+  description: "Skills-Based Talent Management prioritizes skills over job titles. Learn how this approach transforms hiring, development, and workforce planning with Cognaium.",
   keywords: ["skills-based talent management", "skills-based hiring", "skills-based organization", "competency management", "skill-first approach"],
   alternates: {
     canonical: "https://www.cogniai.us/what-is-skills-based-talent-management"
@@ -34,7 +34,7 @@ export default function WhatIsSkillsBasedTalentManagementPage() {
         description="Comprehensive guide to Skills-Based Talent Management - the methodology prioritizing capabilities over credentials in workforce management."
         datePublished="2025-07-20"
         dateModified="2026-01-22"
-        author="CogniAI by MedinovAI"
+        author="Cognaium by MedinovAI"
         url="https://www.cogniai.us/what-is-skills-based-talent-management"
       />
 
@@ -125,7 +125,7 @@ export default function WhatIsSkillsBasedTalentManagementPage() {
                     <div>
                       <h4 className="font-bold mb-2">Skill Assessment & Validation</h4>
                       <p className="text-muted-foreground text-sm">
-                        Methods to identify and verify skills including AI-powered assessments, manager endorsements, certifications, and project-based evidence. CogniAI's AI screening platform provides robust skill validation.
+                        Methods to identify and verify skills including AI-powered assessments, manager endorsements, certifications, and project-based evidence. Cognaium's AI screening platform provides robust skill validation.
                       </p>
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function WhatIsSkillsBasedTalentManagementPage() {
               <h3 className="font-bold">Further Reading</h3>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              Learn more about skills-based practices in our research paper "The Skills-Based Economy" — Part 1 of the CogniAI Research Series.
+              Learn more about skills-based practices in our research paper "The Skills-Based Economy" — Part 1 of the Cognaium Research Series.
             </p>
             <Link href="/research#paper-1">
               <Button variant="outline" className="gap-2">
@@ -261,7 +261,7 @@ export default function WhatIsSkillsBasedTalentManagementPage() {
 
           {/* Meta Footer */}
           <div className="mt-8 pt-6 border-t border-border text-sm text-muted-foreground">
-            <p>Last Updated: January 22, 2026 | Author: CogniAI Research Team</p>
+            <p>Last Updated: January 22, 2026 | Author: Cognaium Research Team</p>
           </div>
         </div>
       </section>

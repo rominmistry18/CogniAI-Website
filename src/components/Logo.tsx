@@ -34,7 +34,7 @@ export function Logo({ className = "", showText = true }: LogoProps) {
       {showText && (
         <div className="flex flex-col leading-none">
           <span className="text-xl font-heading font-bold tracking-tight text-[#002F6C]">
-            CogniAI
+            Cognaium
           </span>
           <span className="text-[10px] font-sans font-semibold text-[#007ACC] uppercase tracking-wider">
             by MedinovAI

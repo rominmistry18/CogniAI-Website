@@ -22,7 +22,7 @@ export default function PrivacyPage() {
               <section className="space-y-6 pt-8 border-t border-white/5">
                 <h2 className="text-2xl font-bold text-foreground font-heading">2. How AI Uses Your Data</h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  CogniAI uses anonymized, aggregated performance data to train our "Clinical Skill Models." <span className="text-foreground font-semibold">Your specific institutional data is never used to train the public model without your explicit consent.</span>
+                  Cognaium uses anonymized, aggregated performance data to train our "Clinical Skill Models." <span className="text-foreground font-semibold">Your specific institutional data is never used to train the public model without your explicit consent.</span>
                 </p>
               </section>
 

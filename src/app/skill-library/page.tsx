@@ -13,7 +13,7 @@ const modules = [
     icon: BookOpen,
     color: "from-indigo-500 to-purple-600",
     topics: [
-      "What is CogniAI?",
+      "What is Cognaium?",
       "Key features overview",
       "User roles (Admin, HR, Manager, Employee)",
       "Navigation and dashboard basics",
@@ -284,7 +284,7 @@ export default function TrainingPage() {
               <span className="gradient-text block">With Expert Training</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive training curriculum covering every feature of CogniAI. From basic navigation to advanced AI configurations.
+              Comprehensive training curriculum covering every feature of Cognaium. From basic navigation to advanced AI configurations.
             </p>
           </div>
 

@@ -411,7 +411,7 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Workforce?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            See how CogniAI can help you hire smarter, train better, and develop your team with AI-powered intelligence.
+            See how Cognaium can help you hire smarter, train better, and develop your team with AI-powered intelligence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "What is Human Capital Liquidity? | CogniAI",
-  description: "Human Capital Liquidity is a framework measuring how fluidly skills and talent can flow within organizations. Learn how to measure and improve workforce agility with CogniAI.",
+  title: "What is Human Capital Liquidity? | Cognaium",
+  description: "Human Capital Liquidity is a framework measuring how fluidly skills and talent can flow within organizations. Learn how to measure and improve workforce agility with Cognaium.",
   keywords: ["human capital liquidity", "workforce agility", "talent mobility", "skills-based talent management", "skill transferability"],
   alternates: {
     canonical: "https://www.cogniai.us/what-is-human-capital-liquidity"
@@ -34,7 +34,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
         description="Comprehensive guide to Human Capital Liquidity - the framework measuring workforce agility and talent mobility in organizations."
         datePublished="2025-06-15"
         dateModified="2026-01-22"
-        author="CogniAI by MedinovAI"
+        author="Cognaium by MedinovAI"
         url="https://www.cogniai.us/what-is-human-capital-liquidity"
       />
 
@@ -44,7 +44,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
           <div className="bg-primary/5 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8">
             <h2 className="text-lg font-semibold mb-3 text-primary">Quick Answer</h2>
             <p className="text-lg font-medium text-foreground leading-relaxed">
-              Human Capital Liquidity is a quantitative framework developed by CogniAI that measures how fluidly skills and talent can flow within and across organizations. It assesses skill transferability, role adaptability, and workforce agility to enable dynamic talent allocation. Organizations with high human capital liquidity can rapidly redeploy talent to meet changing business needs.
+              Human Capital Liquidity is a quantitative framework developed by Cognaium that measures how fluidly skills and talent can flow within and across organizations. It assesses skill transferability, role adaptability, and workforce agility to enable dynamic talent allocation. Organizations with high human capital liquidity can rapidly redeploy talent to meet changing business needs.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
                 How is Human Capital Liquidity Measured?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                CogniAI's Human Capital Liquidity framework measures three core dimensions that together determine how fluidly talent can move within an organization:
+                Cognaium's Human Capital Liquidity framework measures three core dimensions that together determine how fluidly talent can move within an organization:
               </p>
               
               <div className="grid gap-6 my-6">
@@ -159,7 +159,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
                 <div className="glass rounded-xl p-6">
                   <h4 className="font-bold mb-2">4. Use AI-Powered Skill Mapping</h4>
                   <p className="text-muted-foreground text-sm">
-                    Deploy AI tools like CogniAI to automatically identify, validate, and track skills across your workforce, maintaining real-time visibility into organizational capabilities.
+                    Deploy AI tools like Cognaium to automatically identify, validate, and track skills across your workforce, maintaining real-time visibility into organizational capabilities.
                   </p>
                 </div>
               </div>
@@ -169,10 +169,10 @@ export default function WhatIsHumanCapitalLiquidityPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <Brain className="w-7 h-7 text-primary" />
-                Human Capital Liquidity and CogniAI
+                Human Capital Liquidity and Cognaium
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                CogniAI's platform is designed to help organizations measure and improve their human capital liquidity through:
+                Cognaium's platform is designed to help organizations measure and improve their human capital liquidity through:
               </p>
               <ul className="space-y-3 my-6">
                 {[
@@ -219,7 +219,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
               <h3 className="font-bold">Further Reading</h3>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              The Human Capital Liquidity framework is explored in depth in our research paper "The Skills-Based Economy" — Part 1 of the CogniAI Research Series.
+              The Human Capital Liquidity framework is explored in depth in our research paper "The Skills-Based Economy" — Part 1 of the Cognaium Research Series.
             </p>
             <Link href="/research#paper-1">
               <Button variant="outline" className="gap-2">
@@ -231,7 +231,7 @@ export default function WhatIsHumanCapitalLiquidityPage() {
 
           {/* Meta Footer */}
           <div className="mt-8 pt-6 border-t border-border text-sm text-muted-foreground">
-            <p>Last Updated: January 22, 2026 | Author: CogniAI Research Team</p>
+            <p>Last Updated: January 22, 2026 | Author: Cognaium Research Team</p>
           </div>
         </div>
       </section>
