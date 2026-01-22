@@ -4,11 +4,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, CheckCircle2, Zap, Shield, Users, BarChart3, Brain, Award, BookOpen, Video } from "lucide-react";
 
-const stats = [
-  { value: "8+", label: "Question Types" },
-  { value: "3", label: "AI Providers" },
-  { value: "Real-time", label: "Proctoring" },
-  { value: "Multi-tenant", label: "Architecture" },
+const questionTypes = [
+  "Multiple Choice",
+  "Text Response",
+  "Video Answer",
+  "Code Challenge",
+  "File Upload",
+  "Rating Scale",
 ];
 
 const highlights = [
@@ -69,13 +71,15 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-1">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+          <div className="glass rounded-xl p-6 max-w-3xl mx-auto">
+            <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Supported Question Types</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {questionTypes.map((type, index) => (
+                <span key={index} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  {type}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

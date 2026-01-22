@@ -29,7 +29,7 @@ const features = [
     color: "from-violet-500 to-purple-600",
     details: [
       "Conversational AI interviews with natural language processing",
-      "8 question types: Multiple Choice, Text, Video, Code, File Upload, Rating, Ranking, Matching",
+      "Multiple question types: Multiple Choice, Text, Video, Code, File Upload, Rating",
       "AI-generated questions based on job requirements",
       "Automatic scoring and feedback generation",
       "Bulk candidate analysis with comparative insights"
@@ -38,12 +38,12 @@ const features = [
   {
     id: "proctoring",
     title: "Advanced Proctoring",
-    description: "Real-time monitoring with YOLOv8 person detection and audio analysis for assessment integrity.",
+    description: "Real-time monitoring with AI-powered person detection and audio analysis for assessment integrity.",
     icon: Eye,
     color: "from-red-500 to-rose-600",
     details: [
-      "YOLOv8-powered person detection and tracking",
-      "Whisper-based audio monitoring for suspicious sounds",
+      "AI-powered person detection and tracking",
+      "Audio monitoring for suspicious sounds",
       "Browser tab switching detection",
       "Full-screen enforcement with violation logging",
       "Configurable violation thresholds and auto-termination"
@@ -71,10 +71,10 @@ const features = [
     color: "from-emerald-500 to-teal-600",
     details: [
       "Multi-format content: Video, Documents, Quizzes",
-      "AI video generation with D-ID/HeyGen integration",
       "YouTube and document content import",
       "Learning paths with prerequisites",
-      "Progress tracking and completion certificates"
+      "Progress tracking and completion certificates",
+      "Customizable training templates"
     ]
   },
   {
@@ -108,26 +108,26 @@ const features = [
   {
     id: "hr-suite",
     title: "HR Management Suite",
-    description: "Complete HR toolkit with policy management, org charts, and employee development.",
+    description: "Complete HR toolkit with policy management and employee development.",
     icon: Users,
     color: "from-indigo-500 to-violet-600",
     details: [
       "Policy creation and acknowledgment tracking",
-      "Org chart visualization",
       "KRA/KPI management",
       "Employee performance tracking",
-      "Executive dashboard with insights"
+      "Executive dashboard with insights",
+      "Team management and reporting"
     ]
   },
   {
     id: "analytics",
     title: "Advanced Analytics",
-    description: "Elasticsearch-powered insights with behavioral learning analytics and custom reports.",
+    description: "Comprehensive insights with behavioral learning analytics and custom reports.",
     icon: BarChart3,
     color: "from-cyan-500 to-blue-600",
     details: [
       "Real-time dashboards and KPIs",
-      "Elasticsearch-powered search and analytics",
+      "Advanced search and analytics",
       "Behavioral learning patterns",
       "Custom report builder",
       "Export to Excel, PDF, and API access"

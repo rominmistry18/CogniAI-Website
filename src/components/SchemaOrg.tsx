@@ -52,9 +52,9 @@ const softwareSchema = {
   },
   "featureList": [
     "AI-Powered Screening with GPT-4, Claude, and Gemini",
-    "Real-time Proctoring with YOLOv8 Detection",
+    "Real-time AI Proctoring",
     "Applicant Tracking System (ATS)",
-    "AI Video Generation for Training",
+    "Training Content Management",
     "Multi-Agent AI Tutoring",
     "Certification Program Management",
     "HR Policy Management",

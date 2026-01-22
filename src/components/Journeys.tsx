@@ -26,7 +26,7 @@ const journeys = [
     subtitle: "Streamline Talent Operations",
     description: "Complete HR toolkit from recruitment to development. AI-powered screening, applicant tracking, policy management, and employee development in one platform.",
     features: [
-      "AI Screening with 8 question types",
+      "AI Screening with multiple question types",
       "Full ATS with CCI scoring",
       "Policy management and acknowledgments",
       "Training programs and certifications",

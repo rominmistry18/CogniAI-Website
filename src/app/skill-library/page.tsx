@@ -57,7 +57,7 @@ const modules = [
     color: "from-violet-500 to-purple-600",
     topics: [
       "Assessment types: AI Interview, Structured, Leveled",
-      "8 question types deep dive",
+      "Multiple question types deep dive",
       "AI question generation",
       "Template creation and management",
       "Proctoring configuration",
@@ -78,8 +78,8 @@ const modules = [
     icon: Eye,
     color: "from-red-500 to-rose-600",
     topics: [
-      "YOLOv8 person detection setup",
-      "Audio monitoring with Whisper",
+      "AI person detection setup",
+      "Audio monitoring configuration",
       "Browser security enforcement",
       "Violation thresholds and rules",
       "Auto-termination configuration",
@@ -124,15 +124,15 @@ const modules = [
     topics: [
       "Training program structure",
       "Content types: video, document, quiz",
-      "AI video generation with D-ID/HeyGen",
       "YouTube and document import",
       "Learning paths with prerequisites",
       "Progress tracking",
-      "Completion certificates"
+      "Completion certificates",
+      "Training assignment workflows"
     ],
     outcomes: [
       "Create multi-format training",
-      "Generate AI video content",
+      "Build learning paths",
       "Track learner progress"
     ]
   },
@@ -191,7 +191,7 @@ const modules = [
       "Policy creation and AI generation",
       "Policy assignment workflows",
       "Acknowledgment tracking",
-      "Org chart management",
+      "Team management",
       "KRA/KPI configuration",
       "Employee profiles and history",
       "Compliance reporting"
@@ -211,7 +211,7 @@ const modules = [
     color: "from-indigo-500 to-blue-600",
     topics: [
       "Dashboard customization",
-      "Elasticsearch-powered search",
+      "Advanced search features",
       "Behavioral learning analytics",
       "Team and individual reports",
       "Executive dashboards",

@@ -31,7 +31,7 @@ const solutions = [
     icon: Brain,
     title: "AI-Powered Screening",
     description: "Conversational AI interviews with automatic scoring, CCI ranking, and deep candidate insights—reducing time-to-hire by 60%.",
-    features: ["8 Question Types", "Video Proctoring", "Auto-Scoring"]
+    features: ["Multiple Question Types", "Video Proctoring", "Auto-Scoring"]
   },
   {
     icon: Target,

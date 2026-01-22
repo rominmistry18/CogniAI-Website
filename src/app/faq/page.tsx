@@ -27,7 +27,7 @@ const faqCategories = [
       },
       {
         question: "How does CogniAI use artificial intelligence?",
-        answer: "CogniAI uses AI across the entire platform: AI-powered conversational interviews that adapt based on candidate responses, AI question generation from job descriptions, automated resume parsing and skill extraction, AI-driven candidate scoring (CCI - Composite Candidate Index), multi-agent AI tutoring with specialized agents for different learning needs, AI video generation for training content using D-ID and HeyGen, AI-generated certification programs, and the AI Director platform assistant for contextual help and automation."
+        answer: "CogniAI uses AI across the entire platform: AI-powered conversational interviews that adapt based on candidate responses, AI question generation from job descriptions, automated resume parsing and skill extraction, AI-driven candidate scoring (CCI - Composite Candidate Index), multi-agent AI tutoring with specialized agents for different learning needs, AI-generated certification programs, and the AI Director platform assistant for contextual help and automation."
       }
     ]
   },
@@ -38,7 +38,7 @@ const faqCategories = [
     faqs: [
       {
         question: "What types of assessments can I create with CogniAI?",
-        answer: "CogniAI supports three assessment types: (1) AI Interview - conversational assessments where AI adapts questions based on responses, (2) Structured Assessment - traditional fixed-question assessments with various question types, and (3) Leveled Assessment - progressive assessments that increase in difficulty based on performance. All types support 8 question formats: Multiple Choice, Text Response, Video Recording, Code Editor, File Upload, Rating Scale, Ranking, and Matching."
+        answer: "CogniAI supports three assessment types: (1) AI Interview - conversational assessments where AI adapts questions based on responses, (2) Structured Assessment - traditional fixed-question assessments with various question types, and (3) Leveled Assessment - progressive assessments that increase in difficulty based on performance. Supported formats include: Multiple Choice, Text Response, Video Recording, Code Editor, File Upload, and Rating Scale."
       },
       {
         question: "How does AI question generation work?",
@@ -61,7 +61,7 @@ const faqCategories = [
     faqs: [
       {
         question: "How does real-time proctoring work in CogniAI?",
-        answer: "CogniAI's proctoring system uses multiple AI technologies working together: YOLOv8 computer vision for person detection (identifies multiple people, tracks face position, detects suspicious movements), Whisper-based audio monitoring (detects speech, background voices, and suspicious sounds), and browser security (tab switching detection, copy-paste blocking, full-screen enforcement). All violations are logged with timestamps, screenshots, and severity levels for later review."
+        answer: "CogniAI's proctoring system uses multiple AI technologies working together: AI-powered computer vision for person detection (identifies multiple people, tracks face position, detects suspicious movements), audio monitoring (detects speech, background voices, and suspicious sounds), and browser security (tab switching detection, copy-paste blocking, full-screen enforcement). All violations are logged with timestamps, screenshots, and severity levels for later review."
       },
       {
         question: "What happens when a proctoring violation is detected?",
@@ -84,11 +84,11 @@ const faqCategories = [
     faqs: [
       {
         question: "What types of training content does CogniAI support?",
-        answer: "CogniAI supports multi-format training content including: video content (uploaded, YouTube imports, or AI-generated), documents (PDFs, Word files, presentations), interactive quizzes with various question types, SCORM packages from other LMS systems, external URL links to third-party resources, and AI-generated training videos using D-ID and HeyGen with realistic AI avatars. All content types can be combined in structured learning paths with prerequisites and completion tracking."
+        answer: "CogniAI supports multi-format training content including: video content (uploaded or YouTube imports), documents (PDFs, Word files, presentations), interactive quizzes with various question types, SCORM packages from other LMS systems, and external URL links to third-party resources. All content types can be combined in structured learning paths with prerequisites and completion tracking."
       },
       {
-        question: "How does AI video generation work?",
-        answer: "CogniAI integrates with D-ID and HeyGen to generate professional training videos from text scripts. Simply provide a script, select an AI avatar (or upload a custom presenter image), choose voice settings, and CogniAI generates a video with realistic lip-syncing and natural speech. This dramatically reduces training content production costs and time while maintaining professional quality. Generated videos can be edited and combined with other content in your training programs."
+        question: "How do learning paths work?",
+        answer: "CogniAI learning paths let you create structured training journeys with prerequisites and completion requirements. You can combine multiple content types (videos, documents, quizzes) into a guided sequence, track learner progress in real-time, and award completion certificates. Learning paths can be assigned to individuals, teams, or entire departments."
       },
       {
         question: "What is Multi-Agent AI Tutoring?",

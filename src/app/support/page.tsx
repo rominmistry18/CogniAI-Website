@@ -73,7 +73,7 @@ export default function SupportPage() {
     },
     {
       q: "How does the proctoring system work?",
-      a: "Our proctoring system uses YOLOv8 for person detection and Whisper for audio monitoring. It can detect multiple persons, track faces, monitor for suspicious sounds, and enforce browser security. Settings are fully configurable per assessment."
+      a: "Our proctoring system uses AI-powered person detection and audio monitoring. It can detect multiple persons, track faces, monitor for suspicious sounds, and enforce browser security. Settings are fully configurable per assessment."
     },
     {
       q: "Can CogniAI integrate with my existing systems?",

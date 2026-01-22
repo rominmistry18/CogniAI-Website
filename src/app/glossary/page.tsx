@@ -113,7 +113,7 @@ const glossaryTerms = [
     category: "Product Feature",
     icon: Shield,
     shortDefinition: "Real-time monitoring of assessments using AI to ensure integrity and prevent cheating.",
-    fullDefinition: "AI Proctoring in CogniAI uses advanced computer vision and audio analysis to ensure assessment integrity. The system includes YOLOv8 person detection (identifies multiple people), Whisper-based audio monitoring (detects speech and suspicious sounds), browser security enforcement (prevents tab switching and copy-paste), and violation logging with severity levels. Configurable thresholds allow organizations to balance security with candidate experience.",
+    fullDefinition: "AI Proctoring in CogniAI uses advanced computer vision and audio analysis to ensure assessment integrity. The system includes AI-powered person detection (identifies multiple people), audio monitoring (detects speech and suspicious sounds), browser security enforcement (prevents tab switching and copy-paste), and violation logging with severity levels. Configurable thresholds allow organizations to balance security with candidate experience.",
     relatedTerms: ["AI Screening", "Assessment Integrity", "Violation Detection"],
     learnMore: "/features"
   },

@@ -31,10 +31,10 @@ const plans = [
       "Up to 1,000 assessments/month",
       "50 active users",
       "Multi-AI support (GPT-4, Claude, Gemini)",
-      "All 8 question types",
-      "Full proctoring (YOLOv8 + audio)",
+      "All question types",
+      "Full proctoring with AI detection",
       "Priority support",
-      "Advanced analytics + Elasticsearch",
+      "Advanced analytics dashboard",
       "Unlimited templates",
       "Learning paths & training",
       "Basic certifications",
@@ -70,12 +70,6 @@ const plans = [
 
 const addons = [
   { 
-    name: "AI Video Generation", 
-    price: "$0.50/video minute", 
-    description: "Create training videos with D-ID/HeyGen AI avatars",
-    icon: Brain
-  },
-  { 
     name: "Additional Users", 
     price: "$15/user/month", 
     description: "Add more team members to your plan",
@@ -110,9 +104,9 @@ const addons = [
 const comparison = [
   { feature: "Assessments/month", starter: "100", pro: "1,000", enterprise: "Unlimited" },
   { feature: "Active users", starter: "10", pro: "50", enterprise: "Unlimited" },
-  { feature: "Question types", starter: "5", pro: "8", enterprise: "8 + Custom" },
+  { feature: "Question types", starter: "5", pro: "All", enterprise: "All + Custom" },
   { feature: "AI Providers", starter: "GPT-4", pro: "GPT-4, Claude, Gemini", enterprise: "All + Custom" },
-  { feature: "Proctoring", starter: "Basic", pro: "Full (YOLOv8 + Audio)", enterprise: "Full + On-premise" },
+  { feature: "Proctoring", starter: "Basic", pro: "Full (AI Detection)", enterprise: "Full + On-premise" },
   { feature: "ATS & CCI Scoring", starter: "—", pro: "✓", enterprise: "✓" },
   { feature: "Training Programs", starter: "—", pro: "✓", enterprise: "✓" },
   { feature: "Certifications", starter: "—", pro: "Basic", enterprise: "Full" },

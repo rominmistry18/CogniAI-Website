@@ -46,7 +46,7 @@ export default function CareersPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Cutting-Edge AI</h3>
-                    <p className="text-muted-foreground leading-relaxed">Work with GPT-4, Claude, Gemini, YOLOv8, and Whisper. Build multi-agent systems and intelligent automation.</p>
+                    <p className="text-muted-foreground leading-relaxed">Work with GPT-4, Claude, and Gemini. Build multi-agent systems and intelligent automation.</p>
                   </div>
                 </div>
 
@@ -167,12 +167,9 @@ export default function CareersPage() {
                 "Tailwind CSS",
                 "MySQL",
                 "Redis",
-                "Elasticsearch",
                 "OpenAI",
                 "Claude",
                 "Gemini",
-                "YOLOv8",
-                "Whisper",
                 "Docker"
               ].map((tech, i) => (
                 <div key={i} className="text-sm font-medium text-muted-foreground py-2">

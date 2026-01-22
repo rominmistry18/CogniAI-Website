@@ -50,8 +50,8 @@ const featureCategories = [
         icon: MessageSquare
       },
       {
-        title: "8 Question Types",
-        description: "Multiple Choice, Text Response, Video Recording, Code Editor, File Upload, Rating Scale, Ranking, and Matching questions.",
+        title: "Multiple Question Types",
+        description: "Multiple Choice, Text Response, Video Recording, Code Editor, File Upload, and Rating Scale questions.",
         icon: List
       },
       {
@@ -84,13 +84,13 @@ const featureCategories = [
     description: "Real-time monitoring for assessment integrity",
     features: [
       {
-        title: "YOLOv8 Person Detection",
+        title: "AI Person Detection",
         description: "AI-powered detection of multiple persons, face tracking, and suspicious behavior monitoring.",
         icon: Eye
       },
       {
         title: "Audio Monitoring",
-        description: "Whisper-based audio analysis to detect speech, background voices, and suspicious sounds.",
+        description: "AI-powered audio analysis to detect speech, background voices, and suspicious sounds.",
         icon: Mic
       },
       {
@@ -167,8 +167,8 @@ const featureCategories = [
         icon: Layers
       },
       {
-        title: "AI Video Generation",
-        description: "Create training videos from text using D-ID and HeyGen with AI avatars.",
+        title: "Video Content",
+        description: "Create and deliver engaging video-based training content with tracking.",
         icon: Video
       },
       {
@@ -284,8 +284,8 @@ const featureCategories = [
         icon: FileText
       },
       {
-        title: "Org Chart",
-        description: "Visual organization structure with reporting relationships and team views.",
+        title: "Team Management",
+        description: "Manage teams with reporting relationships and department views.",
         icon: Users
       },
       {
@@ -405,37 +405,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Technology Section */}
-      <section className="py-16 bg-card/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary mb-4">
-              Technology Stack
-            </span>
-            <h2 className="text-3xl font-bold mb-4">Built on Modern Technology</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Enterprise-grade infrastructure with cutting-edge AI and robust security.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Multi-AI Providers", desc: "OpenAI GPT-4, Anthropic Claude, Google Gemini", icon: Brain },
-              { title: "Real-time Proctoring", desc: "YOLOv8 detection, Whisper audio, WebSocket", icon: Eye },
-              { title: "Elasticsearch Analytics", desc: "Fast search, behavioral insights, custom reports", icon: BarChart3 },
-              { title: "Enterprise Security", desc: "AES-256 encryption, RBAC, audit logging", icon: Shield }
-            ].map((item, index) => (
-              <div key={index} className="glass rounded-xl p-6 text-center">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16">

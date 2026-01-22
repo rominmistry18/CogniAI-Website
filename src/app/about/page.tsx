@@ -151,12 +151,12 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Brain, title: "AI Screening", desc: "Conversational interviews with 8 question types" },
-              { icon: Shield, title: "Proctoring", desc: "YOLOv8 detection and audio monitoring" },
+              { icon: Brain, title: "AI Screening", desc: "Conversational interviews with multiple question types" },
+              { icon: Shield, title: "Proctoring", desc: "AI-powered detection and audio monitoring" },
               { icon: Users, title: "ATS", desc: "Complete hiring pipeline with CCI scoring" },
               { icon: Award, title: "Certifications", desc: "AI-generated programs and certificates" },
               { icon: Rocket, title: "AI Tutoring", desc: "Multi-agent personalized learning" },
-              { icon: Heart, title: "HR Suite", desc: "Policies, org charts, and KRA/KPI" }
+              { icon: Heart, title: "HR Suite", desc: "Policies, team management, and KRA/KPI" }
             ].map((item, index) => (
               <div key={index} className="glass rounded-xl p-6 flex gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">

@@ -44,7 +44,7 @@ export default function SecurityPage() {
         "Real-time security monitoring",
         "Automated threat detection",
         "Activity tracking per user",
-        "Elasticsearch-powered log analysis"
+        "Advanced log analysis"
       ]
     }
   ];
@@ -189,7 +189,7 @@ export default function SecurityPage() {
               <div className="order-2 lg:order-1">
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: Eye, label: "YOLOv8 Detection" },
+                    { icon: Eye, label: "AI Detection" },
                     { icon: Bell, label: "Audio Monitoring" },
                     { icon: Shield, label: "Browser Security" },
                     { icon: Activity, label: "Violation Logging" }
@@ -205,7 +205,7 @@ export default function SecurityPage() {
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl font-bold mb-6">Proctoring Security</h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our proctoring system uses YOLOv8 for person detection and Whisper for audio monitoring, ensuring assessment integrity while respecting privacy. All proctoring data is encrypted and can be deployed on-premise for enterprise customers.
+                  Our proctoring system uses AI-powered person detection and audio monitoring, ensuring assessment integrity while respecting privacy. All proctoring data is encrypted and can be deployed on-premise for enterprise customers.
                 </p>
                 
                 <ul className="space-y-2">

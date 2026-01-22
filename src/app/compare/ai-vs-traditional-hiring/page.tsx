@@ -312,7 +312,7 @@ export default function CompareAIvsTraditionalPage() {
               {
                 icon: Shield,
                 title: "Proctored Assessments",
-                description: "Real-time AI proctoring with YOLOv8 detection ensures assessment integrity at any scale."
+                description: "Real-time AI proctoring with advanced detection ensures assessment integrity at any scale."
               },
               {
                 icon: Target,
@@ -331,7 +331,7 @@ export default function CompareAIvsTraditionalPage() {
               },
               {
                 icon: Zap,
-                title: "8 Question Types",
+                title: "Multiple Question Types",
                 description: "Video, code, file upload, and more—assess any skill with the right question format."
               }
             ].map((item, i) => (
