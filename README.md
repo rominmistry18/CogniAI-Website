@@ -8,7 +8,7 @@ Copy `.env.example` to `.env` and configure your URLs:
 
 ```bash
 # Application URLs (configure in .env)
-WEBSITE_URL=http://localhost:3000
+WEBSITE_URL=http://localhost:3100
 ADMIN_URL=http://localhost:3007
 
 # For production SEO (canonical URLs, schema.org)
@@ -27,7 +27,7 @@ pnpm dev
 bun dev
 ```
 
-- Website: Opens on the port configured in `WEBSITE_URL` (default: http://localhost:3000)
+- Website: Opens on the port configured in `WEBSITE_URL` (default: http://localhost:3100)
 - Admin Panel: Opens on the port configured in `ADMIN_URL` (default: http://localhost:3007)
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

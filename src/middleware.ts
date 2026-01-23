@@ -22,7 +22,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = request.headers.get("host") || "";
   
-  // Extract port from host (e.g., "localhost:3000" -> "3000")
+  // Extract port from host (e.g., "localhost:3100" -> "3100")
   const portMatch = host.match(/:(\d+)$/);
   const port = portMatch ? portMatch[1] : "80";
   
@@ -38,7 +38,7 @@ export function middleware(request: NextRequest) {
   const isWebsitePort = port === WEBSITE_PORT && !isAdminDomain;
   const isAdminPort = port === ADMIN_PORT || isAdminDomain;
 
-  // On website port (3000): Block admin routes
+  // On website port (3100): Block admin routes
   if (isWebsitePort && isAdminRoute) {
     // Return 404 for admin routes on website port
     return new NextResponse("Not Found", { status: 404 });

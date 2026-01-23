@@ -4,14 +4,14 @@
  */
 
 // Website URL (public-facing site)
-export const WEBSITE_URL = process.env.WEBSITE_URL || process.env.WEBSITE || "http://localhost:3000";
+export const WEBSITE_URL = process.env.WEBSITE_URL || process.env.WEBSITE || "http://localhost:3100";
 
 // Admin URL (admin panel)
 export const ADMIN_URL = process.env.ADMIN_URL || process.env.ADMIN_PORT || "http://localhost:3007";
 
 // Public Website URL for SEO/metadata (use NEXT_PUBLIC_ for client-side access if needed)
 // This should be the production URL for SEO purposes
-export const PUBLIC_WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || process.env.WEBSITE_URL || process.env.WEBSITE || "http://localhost:3000";
+export const PUBLIC_WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL || process.env.WEBSITE_URL || process.env.WEBSITE || "http://localhost:3100";
 
 // Extract ports from URLs for middleware compatibility
 export function getWebsitePort(): string {

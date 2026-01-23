@@ -5,7 +5,7 @@
 require('dotenv').config();
 const { spawn } = require('child_process');
 
-const websiteUrl = process.env.WEBSITE_URL || process.env.WEBSITE || 'http://localhost:3000';
+const websiteUrl = process.env.WEBSITE_URL || process.env.WEBSITE || 'http://localhost:3100';
 const url = new URL(websiteUrl);
 const port = url.port || (url.protocol === 'https:' ? '443' : '80');
 

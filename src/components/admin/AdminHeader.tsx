@@ -71,7 +71,7 @@ export function AdminHeader({ user }: AdminHeaderProps) {
     fetchNotifications();
     
     // Poll for new notifications every 30 seconds
-    const interval = setInterval(fetchNotifications, 30000);
+    const interval = setInterval(fetchNotifications, 31000);
     return () => clearInterval(interval);
   }, [fetchNotifications]);
 

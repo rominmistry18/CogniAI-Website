@@ -141,7 +141,7 @@ export async function sendNotificationEmail(
     return false;
   }
 
-  const adminUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const adminUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3100";
   
   // Build entity link if applicable
   let entityLink = "";
