@@ -44,7 +44,7 @@ export function middleware(request: NextRequest) {
     return new NextResponse("Not Found", { status: 404 });
   }
 
-  // On admin port (3001): Redirect non-admin routes to admin
+  // On admin port (3007): Redirect non-admin routes to admin
   if (isAdminPort && !isAdminRoute && !pathname.startsWith("/api/") && !pathname.startsWith("/_next")) {
     // Redirect to admin dashboard
     return NextResponse.redirect(new URL("/admin", request.url));

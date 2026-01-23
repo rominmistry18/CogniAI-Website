@@ -5,7 +5,7 @@
 require('dotenv').config();
 const { spawn } = require('child_process');
 
-const adminUrl = process.env.ADMIN_URL || process.env.ADMIN_PORT || 'http://localhost:3001';
+const adminUrl = process.env.ADMIN_URL || process.env.ADMIN_PORT || 'http://localhost:3007';
 const url = new URL(adminUrl);
 const port = url.port || (url.protocol === 'https:' ? '443' : '80');
 
