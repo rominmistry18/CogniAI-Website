@@ -1,28 +1,46 @@
-"use client";
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, CheckCircle2, Zap, Shield, Users, BarChart3, Brain, Award, BookOpen, Video } from "lucide-react";
+import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
-const questionTypes = [
-  "Multiple Choice",
-  "Text Response",
-  "Video Answer",
-  "Code Challenge",
-  "File Upload",
-  "Rating Scale",
-];
+// Default content - used when no database content is provided
+const defaultContent = {
+  badge: "Enterprise-Ready AI Platform",
+  title: "Intelligent Skill Assessment",
+  titleHighlight: "For Modern Organizations",
+  subtitle: "The complete AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development. From AI interviews to certifications, all in one place.",
+  primaryCta: "Request a Demo",
+  primaryCtaLink: "/contact",
+  secondaryCta: "Explore Features",
+  secondaryCtaLink: "/features",
+  highlights: [
+    "AI-Powered Interviews",
+    "Video Proctoring",
+    "Certifications",
+    "AI Tutoring",
+    "ATS Integration",
+    "Advanced Analytics",
+  ],
+  questionTypes: [
+    "Multiple Choice",
+    "Text Response",
+    "Video Answer",
+    "Code Challenge",
+    "File Upload",
+    "Rating Scale",
+  ],
+};
 
-const highlights = [
-  { icon: Brain, text: "AI-Powered Interviews" },
-  { icon: Video, text: "Video Proctoring" },
-  { icon: Award, text: "Certifications" },
-  { icon: BookOpen, text: "AI Tutoring" },
-  { icon: Users, text: "ATS Integration" },
-  { icon: BarChart3, text: "Advanced Analytics" },
-];
+interface HeroProps {
+  content?: Record<string, unknown>;
+}
 
-export function Hero() {
+export function Hero({ content }: HeroProps) {
+  // Merge database content with defaults
+  const data = { ...defaultContent, ...content };
+  
+  const highlights = (data.highlights as string[]) || defaultContent.highlights;
+  const questionTypes = (data.questionTypes as string[]) || defaultContent.questionTypes;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden pt-16">
       <div className="absolute inset-0 overflow-hidden">
@@ -34,39 +52,40 @@ export function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
             <span className="glow-dot" />
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Enterprise-Ready AI Platform</span>
+            <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
+              {data.badge}
+            </span>
           </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 text-[#002F6C]">
-              <span className="block">Intelligent Skill Assessment</span>
-              <span className="gradient-text">For Modern Organizations</span>
-            </h1>
-
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 text-[#002F6C]">
+            <span className="block">{data.title}</span>
+            <span className="gradient-text">{data.titleHighlight}</span>
+          </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            The complete AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development. From AI interviews to certifications, all in one place.
+            {data.subtitle}
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <Link href="/contact">
+            <Link href={data.primaryCtaLink as string}>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 h-12 px-8">
-                Request a Demo
+                {data.primaryCta}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <Link href="/features">
+            <Link href={data.secondaryCtaLink as string}>
               <Button size="lg" variant="outline" className="gap-2 h-12 px-8 border-border hover:bg-white/5">
                 <Play className="w-4 h-4" />
-                Explore Features
+                {data.secondaryCta}
               </Button>
             </Link>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 mb-16">
-            {highlights.map((item, index) => (
+            {highlights.map((text, index) => (
               <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-accent" />
-                <span>{item.text}</span>
+                <span>{text}</span>
               </div>
             ))}
           </div>

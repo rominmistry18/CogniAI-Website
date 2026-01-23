@@ -37,3 +37,40 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Uploads
+/uploads
+
+# Environment variables (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Playwright MCP screenshots
+.playwright-mcp/
+
+# Orchids local config
+.orchids/
+
+# Local utility scripts
+check-db.mjs
+scripts/test-email.mjs
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Cursor workspace assets
+.cursor/

@@ -4,9 +4,12 @@ import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/components/SchemaOrg";
+import { headers } from "next/headers";
+import { PUBLIC_WEBSITE_BASE_URL } from "@/lib/config/app";
+import { getPageContent } from "@/lib/content";
+import { getSiteSettings, isMaintenanceMode } from "@/lib/settings";
+import { redirect } from "next/navigation";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,6 +22,9 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
   display: "swap",
 });
+
+// Get the base URL for metadata (falls back to localhost if not configured)
+const siteUrl = PUBLIC_WEBSITE_BASE_URL;
 
 export const metadata: Metadata = {
   title: "Cognaium by MedinovAI - AI-Powered Skill Assessment & Training",
@@ -38,14 +44,14 @@ export const metadata: Metadata = {
   authors: [{ name: "MedinovAI" }],
   creator: "MedinovAI",
   publisher: "Cognaium",
-  metadataBase: new URL("https://www.cogniai.us"),
+  metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: "https://www.cogniai.us"
+    canonical: siteUrl
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.cogniai.us",
+    url: siteUrl,
     siteName: "Cognaium",
     title: "Cognaium - AI-Powered Skill Assessment & Workforce Development",
     description: "Enterprise-grade AI platform for skill assessment, talent acquisition, training, and workforce development. Powered by GPT-4, Claude, and Gemini.",
@@ -77,14 +83,80 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    // Check if current route is an admin route
+    const headersList = await headers();
+    const pathname = headersList.get("x-pathname") || headersList.get("x-invoke-path") || "";
+    const isAdminRoute = pathname.startsWith("/admin");
+    const isMaintenancePage = pathname === "/maintenance";
+    const isApiRoute = pathname.startsWith("/api");
+
+    // Dynamically import Navbar and Footer only for non-admin routes
+    const { Navbar } = await import("@/components/Navbar");
+    const { Footer } = await import("@/components/Footer");
+
+    // Fetch navbar links and branding from database for non-admin routes
+    let navbarMainLinks: Array<{ href: string; label: string }> = [];
+    let navbarMoreLinks: Array<{ href: string; label: string }> = [];
+    let branding: { logoUrl?: string; logoText?: string; logoTagline?: string } = {};
+    let faviconUrl: string | undefined;
+    let ogImageUrl: string | undefined;
+    
+    if (!isAdminRoute) {
+      try {
+        const [globalContent, siteSettings, maintenanceEnabled] = await Promise.all([
+          getPageContent("global"),
+          getSiteSettings(),
+          isMaintenanceMode(),
+        ]);
+        
+        // Check for maintenance mode (only for public pages, not maintenance page itself or API routes)
+        if (maintenanceEnabled && !isMaintenancePage && !isApiRoute) {
+          redirect("/maintenance");
+        }
+        
+        const navbarMain = globalContent.navbar_main as { items?: Array<{ href: string; label: string }> } || {};
+        const navbarMore = globalContent.navbar_more as { items?: Array<{ href: string; label: string }> } || {};
+        navbarMainLinks = navbarMain.items || [];
+        navbarMoreLinks = navbarMore.items || [];
+        
+        // Extract branding settings
+        branding = {
+          logoUrl: siteSettings.logo_url || undefined,
+          logoText: siteSettings.logo_text || "Cognaium",
+          logoTagline: siteSettings.logo_tagline || "by MedinovAI",
+        };
+        faviconUrl = siteSettings.favicon_url || undefined;
+        ogImageUrl = siteSettings.og_image || undefined;
+      } catch {
+        // Use default links if database fetch fails
+      }
+    }
+
     return (
       <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
-        <body className="antialiased bg-[#FFFFFF] text-[#002F6C] font-body">
+        <head>
+          {/* Dynamic Favicon from Settings */}
+          {faviconUrl && (
+            <>
+              <link rel="icon" href={faviconUrl} />
+              <link rel="shortcut icon" href={faviconUrl} />
+              <link rel="apple-touch-icon" href={faviconUrl} />
+            </>
+          )}
+          {/* Dynamic OG Image from Settings */}
+          {ogImageUrl && (
+            <>
+              <meta property="og:image" content={ogImageUrl} />
+              <meta name="twitter:image" content={ogImageUrl} />
+            </>
+          )}
+        </head>
+        <body className={`antialiased font-body ${isAdminRoute ? 'bg-slate-950 text-white' : 'bg-[#FFFFFF] text-[#002F6C]'}`}>
           <Script
             id="orchids-browser-logs"
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
@@ -102,10 +174,10 @@ export default function RootLayout({
             data-debug="true"
             data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
           />
-          <SchemaOrg />
-          <Navbar />
+          {!isAdminRoute && <SchemaOrg />}
+          {!isAdminRoute && <Navbar mainLinks={navbarMainLinks} moreLinks={navbarMoreLinks} branding={branding} />}
           <main>{children}</main>
-          <Footer />
+          {!isAdminRoute && <Footer />}
           <VisualEditsMessenger />
         </body>
       </html>

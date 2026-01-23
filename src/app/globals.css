@@ -37,6 +37,40 @@
     --sidebar-border: rgba(0, 47, 108, 0.1);
     --sidebar-ring: #00C9D1;
   }
+
+  .dark {
+    --background: #020617;
+    --foreground: #f1f5f9;
+    --card: #0f172a;
+    --card-foreground: #f1f5f9;
+    --popover: #0f172a;
+    --popover-foreground: #f1f5f9;
+    --primary: #00C9D1;
+    --primary-foreground: #020617;
+    --secondary: #1e293b;
+    --secondary-foreground: #f1f5f9;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #f1f5f9;
+    --destructive: #ef4444;
+    --border: #334155;
+    --input: #334155;
+    --ring: #00C9D1;
+    --chart-1: #00C9D1;
+    --chart-2: #007ACC;
+    --chart-3: #60a5fa;
+    --chart-4: #ec4899;
+    --chart-5: #06b6d4;
+    --sidebar: #0f172a;
+    --sidebar-foreground: #f1f5f9;
+    --sidebar-primary: #00C9D1;
+    --sidebar-primary-foreground: #020617;
+    --sidebar-accent: #1e293b;
+    --sidebar-accent-foreground: #f1f5f9;
+    --sidebar-border: #334155;
+    --sidebar-ring: #00C9D1;
+  }
 }
 
 @layer base {
@@ -109,9 +143,28 @@
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 47, 108, 0.1);
+}
+
+/* Dropdown menu with higher opacity for better text visibility */
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  isolation: isolate;
+  box-shadow: 0 8px 32px rgba(0, 47, 108, 0.15);
+}
+
+/* For sticky elements - high opacity to hide scrolling content with subtle blur */
+.glass-sticky {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 47, 108, 0.1);
+  isolation: isolate;
 }
 
 .gradient-text {
@@ -159,4 +212,129 @@
   background: #00C9D1;
   border-radius: 50%;
   box-shadow: 0 0 10px #00C9D1, 0 0 20px #00C9D1;
+}
+
+/* Admin Panel Dark Theme Overrides for Dropdowns/Selects/Popovers */
+[data-slot="select-content"],
+[data-slot="dropdown-menu-content"],
+[data-slot="dropdown-menu-sub-content"],
+[data-slot="popover-content"] {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Select Trigger - the button that shows selected value */
+[data-slot="select-trigger"] {
+  color: #f1f5f9 !important;
+  border-color: #475569 !important;
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+[data-slot="select-trigger"]:hover {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+  border-color: #64748b !important;
+}
+
+[data-slot="select-trigger"] [data-slot="select-value"] {
+  color: #f1f5f9 !important;
+}
+
+/* Ensure status badge colors in select trigger are visible */
+[data-slot="select-trigger"] .text-blue-400 { color: #60a5fa !important; }
+[data-slot="select-trigger"] .text-yellow-400 { color: #facc15 !important; }
+[data-slot="select-trigger"] .text-purple-400 { color: #c084fc !important; }
+[data-slot="select-trigger"] .text-indigo-400 { color: #818cf8 !important; }
+[data-slot="select-trigger"] .text-green-400 { color: #4ade80 !important; }
+[data-slot="select-trigger"] .text-red-400 { color: #f87171 !important; }
+[data-slot="select-trigger"] .text-orange-400 { color: #fb923c !important; }
+[data-slot="select-trigger"] .text-slate-400 { color: #94a3b8 !important; }
+
+[data-slot="select-trigger"] [data-placeholder] {
+  color: #94a3b8 !important;
+}
+
+[data-slot="select-trigger"] svg {
+  color: #94a3b8 !important;
+}
+
+/* Select and dropdown items - set default color but allow overrides */
+[data-slot="select-item"],
+[data-slot="dropdown-menu-item"],
+[data-slot="dropdown-menu-checkbox-item"],
+[data-slot="dropdown-menu-radio-item"] {
+  color: #f1f5f9;
+}
+
+/* Ensure status badge colors are visible in dropdowns */
+[data-slot="select-item"] .text-blue-400 { color: #60a5fa !important; }
+[data-slot="select-item"] .text-yellow-400 { color: #facc15 !important; }
+[data-slot="select-item"] .text-purple-400 { color: #c084fc !important; }
+[data-slot="select-item"] .text-indigo-400 { color: #818cf8 !important; }
+[data-slot="select-item"] .text-green-400 { color: #4ade80 !important; }
+[data-slot="select-item"] .text-red-400 { color: #f87171 !important; }
+[data-slot="select-item"] .text-orange-400 { color: #fb923c !important; }
+[data-slot="select-item"] .text-slate-400 { color: #94a3b8 !important; }
+
+/* Also for dropdown menu items */
+[data-slot="dropdown-menu-item"] .text-blue-400 { color: #60a5fa !important; }
+[data-slot="dropdown-menu-item"] .text-yellow-400 { color: #facc15 !important; }
+[data-slot="dropdown-menu-item"] .text-purple-400 { color: #c084fc !important; }
+[data-slot="dropdown-menu-item"] .text-indigo-400 { color: #818cf8 !important; }
+[data-slot="dropdown-menu-item"] .text-green-400 { color: #4ade80 !important; }
+[data-slot="dropdown-menu-item"] .text-red-400 { color: #f87171 !important; }
+[data-slot="dropdown-menu-item"] .text-orange-400 { color: #fb923c !important; }
+[data-slot="dropdown-menu-item"] .text-slate-400 { color: #94a3b8 !important; }
+
+[data-slot="select-item"]:hover,
+[data-slot="select-item"]:focus,
+[data-slot="select-item"][data-highlighted],
+[data-slot="dropdown-menu-item"]:hover,
+[data-slot="dropdown-menu-item"]:focus,
+[data-slot="dropdown-menu-item"][data-highlighted],
+[data-slot="dropdown-menu-checkbox-item"]:hover,
+[data-slot="dropdown-menu-checkbox-item"]:focus,
+[data-slot="dropdown-menu-checkbox-item"][data-highlighted],
+[data-slot="dropdown-menu-radio-item"]:hover,
+[data-slot="dropdown-menu-radio-item"]:focus,
+[data-slot="dropdown-menu-radio-item"][data-highlighted] {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+[data-slot="select-item"][data-state="checked"],
+[data-slot="dropdown-menu-checkbox-item"][data-state="checked"],
+[data-slot="dropdown-menu-radio-item"][data-state="checked"] {
+  background-color: #00C9D1 !important;
+  color: #020617 !important;
+}
+
+[data-slot="select-label"],
+[data-slot="dropdown-menu-label"] {
+  color: #94a3b8 !important;
+}
+
+[data-slot="select-separator"],
+[data-slot="dropdown-menu-separator"] {
+  background-color: #334155 !important;
+}
+
+/* Textarea styling for admin */
+[data-slot="textarea"] {
+  color: #f1f5f9 !important;
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  border-color: #475569 !important;
+}
+
+[data-slot="textarea"]::placeholder {
+  color: #64748b !important;
+}
+
+/* Input styling for admin */
+[data-slot="input"] {
+  color: #f1f5f9 !important;
+}
+
+[data-slot="input"]::placeholder {
+  color: #64748b !important;
 }

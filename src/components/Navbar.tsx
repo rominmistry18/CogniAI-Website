@@ -7,7 +7,25 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface BrandingSettings {
+  logoUrl?: string;
+  logoText?: string;
+  logoTagline?: string;
+}
+
+interface NavbarProps {
+  mainLinks?: NavLink[];
+  moreLinks?: NavLink[];
+  branding?: BrandingSettings;
+}
+
+// Default links as fallback
+const defaultNavLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
@@ -16,7 +34,7 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const moreLinks = [
+const defaultMoreLinks: NavLink[] = [
   { href: "/research", label: "Research" },
   { href: "/glossary", label: "Glossary" },
   { href: "/faq", label: "FAQ" },
@@ -25,17 +43,24 @@ const moreLinks = [
   { href: "/careers", label: "Careers" },
 ];
 
-export function Navbar() {
+export function Navbar({ mainLinks, moreLinks, branding }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const pathname = usePathname();
 
+  const navLinks = mainLinks && mainLinks.length > 0 ? mainLinks : defaultNavLinks;
+  const extraLinks = moreLinks && moreLinks.length > 0 ? moreLinks : defaultMoreLinks;
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-sticky">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center group">
-              <Logo />
+              <Logo 
+                logoUrl={branding?.logoUrl}
+                logoText={branding?.logoText}
+                logoTagline={branding?.logoTagline}
+              />
             </Link>
 
           <div className="hidden md:flex items-center gap-1">
@@ -65,8 +90,8 @@ export function Navbar() {
               </button>
               
               {showMore && (
-                <div className="absolute top-full right-0 mt-2 w-48 glass rounded-lg py-2 shadow-lg border border-border">
-                  {moreLinks.map((link) => (
+                <div className="absolute top-full right-0 mt-2 w-48 glass-dropdown rounded-lg py-2 shadow-lg border border-border z-[100]">
+                  {extraLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -107,7 +132,7 @@ export function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden glass border-t border-border">
+        <div className="md:hidden glass-sticky border-t border-border">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link
@@ -126,7 +151,7 @@ export function Navbar() {
             
             <div className="border-t border-border my-2 pt-2">
               <p className="px-4 py-1 text-xs text-muted-foreground uppercase tracking-wider">More</p>
-              {moreLinks.map((link) => (
+              {extraLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

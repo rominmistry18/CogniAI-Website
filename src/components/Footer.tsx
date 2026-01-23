@@ -1,11 +1,28 @@
-"use client";
-
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { Twitter, Linkedin, Github, Mail } from "lucide-react";
+import { Twitter, Linkedin, Mail } from "lucide-react";
 import { APP_VERSION } from "@/lib/version";
+import { getSiteSettings } from "@/lib/settings";
+import { getSectionContent } from "@/lib/content";
 
-const footerLinks = {
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterLinks {
+  product?: FooterLink[];
+  company?: FooterLink[];
+  resources?: FooterLink[];
+  legal?: FooterLink[];
+}
+
+interface FooterBrand {
+  description?: string;
+}
+
+// Default footer links - used when no database content is provided
+const defaultFooterLinks: FooterLinks = {
   product: [
     { label: "Features", href: "/features" },
     { label: "Pricing", href: "/pricing" },
@@ -32,14 +49,47 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Mail, href: "mailto:hello@cogniai.us", label: "Email" },
-];
+const defaultBrand: FooterBrand = {
+  description: "AI-powered platform for skill assessment, talent acquisition, and workforce development.",
+};
 
-export function Footer() {
+export async function Footer() {
+  // Fetch settings and footer content from database
+  const [settings, linksContent, brandContent] = await Promise.all([
+    getSiteSettings(),
+    getSectionContent<FooterLinks>("global", "footer_links"),
+    getSectionContent<FooterBrand>("global", "footer_brand"),
+  ]);
+
+  // Extract branding settings
+  const branding = {
+    logoUrl: settings.logo_url || undefined,
+    logoText: settings.logo_text || "Cognaium",
+    logoTagline: settings.logo_tagline || "by MedinovAI",
+  };
+
+  // Merge with defaults
+  const footerLinks: FooterLinks = {
+    product: linksContent?.product && linksContent.product.length > 0 ? linksContent.product : defaultFooterLinks.product,
+    company: linksContent?.company && linksContent.company.length > 0 ? linksContent.company : defaultFooterLinks.company,
+    resources: linksContent?.resources && linksContent.resources.length > 0 ? linksContent.resources : defaultFooterLinks.resources,
+    legal: linksContent?.legal && linksContent.legal.length > 0 ? linksContent.legal : defaultFooterLinks.legal,
+  };
+
+  const brand = { ...defaultBrand, ...brandContent };
+  
+  // Build social links from settings
+  const socialLinks = [
+    settings.social_twitter && { icon: Twitter, href: settings.social_twitter, label: "Twitter" },
+    settings.social_linkedin && { icon: Linkedin, href: settings.social_linkedin, label: "LinkedIn" },
+    settings.company_email && { icon: Mail, href: `https://mail.google.com/mail/?view=cm&fs=1&to=${settings.company_email}`, label: "Email" },
+  ].filter(Boolean) as { icon: React.ElementType; href: string; label: string }[];
+
+  // If no social links are set, show default email
+  if (socialLinks.length === 0) {
+    socialLinks.push({ icon: Mail, href: `https://mail.google.com/mail/?view=cm&fs=1&to=${settings.company_email || "hello@cognaium.com"}`, label: "Email" });
+  }
+
   return (
     <footer className="border-t border-border bg-card/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -47,10 +97,14 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <Logo />
+              <Logo 
+                logoUrl={branding.logoUrl}
+                logoText={branding.logoText}
+                logoTagline={branding.logoTagline}
+              />
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs mb-6">
-              AI-powered platform for skill assessment, talent acquisition, and workforce development.
+              {brand.description}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -70,7 +124,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-3">
-              {footerLinks.product.map((link, index) => (
+              {footerLinks.product?.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -87,7 +141,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
+              {footerLinks.company?.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -104,7 +158,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link, index) => (
+              {footerLinks.resources?.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -121,7 +175,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
+              {footerLinks.legal?.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -138,7 +192,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Cognaium by MedinovAI. All rights reserved.
+            © {new Date().getFullYear()} {settings.company_name || "Cognaium"} by MedinovAI. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-xs text-muted-foreground">

@@ -1,6 +1,10 @@
 "use client";
 
 import Script from "next/script";
+import { PUBLIC_WEBSITE_BASE_URL } from "@/lib/config/app";
+
+// Get base URL for schema.org markup
+const siteUrl = PUBLIC_WEBSITE_BASE_URL;
 
 // Organization Schema
 const organizationSchema = {
@@ -8,8 +12,8 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "Cognaium",
   "alternateName": "Cognaium by MedinovAI",
-  "url": "https://www.cogniai.us",
-  "logo": "https://www.cogniai.us/logo.png",
+  "url": siteUrl,
+  "logo": `${siteUrl}/logo.png`,
   "description": "Enterprise-grade AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development.",
   "parentOrganization": {
     "@type": "Organization",
@@ -24,7 +28,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     "contactType": "sales",
     "email": "hello@cogniai.us",
-    "url": "https://www.cogniai.us/contact"
+    "url": `${siteUrl}/contact`
   },
   "address": {
     "@type": "PostalAddress",
@@ -41,14 +45,14 @@ const softwareSchema = {
   "applicationSubCategory": "Human Resources Software",
   "operatingSystem": "Web-based",
   "description": "AI-powered platform for skill assessment, talent acquisition, employee training, and workforce development. Features include AI screening, real-time proctoring, ATS, training programs, AI tutoring, and certifications.",
-  "url": "https://www.cogniai.us",
+  "url": siteUrl,
   "provider": {
     "@type": "Organization",
     "name": "MedinovAI"
   },
   "offers": {
     "@type": "Offer",
-    "url": "https://www.cogniai.us/pricing"
+    "url": `${siteUrl}/pricing`
   },
   "featureList": [
     "AI-Powered Screening with GPT-4, Claude, and Gemini",
@@ -60,7 +64,7 @@ const softwareSchema = {
     "HR Policy Management",
     "Advanced Analytics Dashboard"
   ],
-  "screenshot": "https://www.cogniai.us/screenshots/platform.png"
+  "screenshot": `${siteUrl}/screenshots/platform.png`
 };
 
 // WebSite Schema for sitelinks search
@@ -69,13 +73,13 @@ const websiteSchema = {
   "@type": "WebSite",
   "name": "Cognaium",
   "alternateName": "Cognaium by MedinovAI",
-  "url": "https://www.cogniai.us",
+  "url": siteUrl,
   "description": "AI-powered platform for skill assessment, talent acquisition, and workforce development",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://www.cogniai.us/search?q={search_term_string}"
+      "urlTemplate": `${siteUrl}/search?q={search_term_string}`
     },
     "query-input": "required name=search_term_string"
   }
@@ -157,7 +161,7 @@ export function ArticleSchema({
     "publisher": {
       "@type": "Organization",
       "name": "Cognaium by MedinovAI",
-      "url": "https://www.cogniai.us"
+      "url": siteUrl
     },
     "url": url
   };
@@ -222,7 +226,7 @@ export function DefinedTermSchema({
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
       "name": "Cognaium Glossary",
-      "url": "https://www.cogniai.us/glossary"
+      "url": `${siteUrl}/glossary`
     }
   };
 

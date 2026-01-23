@@ -1,24 +1,66 @@
 import Image from "next/image";
-import { GraduationCap, Briefcase, TrendingUp, Globe, Award, Shield, Target } from "lucide-react";
+import { GraduationCap, Briefcase, TrendingUp, Globe, Award, Shield, Target, Users, Brain, Zap, Heart, Star } from "lucide-react";
 
-const leaders = [
-    {
-      name: "Mayank Trivedi",
-      role: "Executive Chairman",
-      type: "Executive Leadership",
-      image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/b465df00-e3e7-4e62-b617-07477a09ba7e/Mayank-Trivedi-resized-1767669788661.jpeg?width=8000&height=8000&resize=contain",
-      qualifications: "B.E. Mechanical Engineering",
-      experience: "20+ Years Experience",
-        bio: [
-          "Mayank Trivedi is a seasoned technocrat and visionary leader with over two decades of experience in the healthcare information technology sector. As the Executive Chairman of Cognaium, he brings a proven track record of scaling multinational organizations and delivering mission-critical healthcare solutions globally.",
-          "A Mechanical Engineering graduate from Maharaja Sayajirao University of Baroda, Mayank founded Sysware Healthcare Systems, which grew into a global leader in Laboratory Information Systems and was acquired by Eclipsys Corporation (now part of Allscripts). He subsequently served as President of Eclipsys India, where he led the expansion of operations to over 700 professionals.",
-          "Currently serving as the CEO of myOnsite Healthcare, Mayank leads the strategic integration of Cognaium within the broader MedinovAI ecosystem, focusing on pioneering AI-driven workforce intelligence for clinical environments. His unique blend of engineering excellence and deep healthcare domain expertise ensures Cognaium remains at the forefront of technological innovation."
-        ],
-      highlights: [
-        { icon: Target, label: "Strategic Vision" },
-        { icon: Award, label: "Healthcare IT Pioneer" }
-      ]
-    },
+// Icon mapping for dynamic icons from database
+const iconMap: Record<string, React.ElementType> = {
+  Target,
+  Award,
+  Globe,
+  TrendingUp,
+  Shield,
+  Users,
+  Brain,
+  Zap,
+  Heart,
+  Star,
+  GraduationCap,
+  Briefcase,
+};
+
+export interface LeaderHighlight {
+  icon: string;
+  label: string;
+}
+
+export interface Leader {
+  name: string;
+  role: string;
+  type: string;
+  image: string;
+  qualifications: string;
+  experience: string;
+  bio: string[];
+  highlights: LeaderHighlight[];
+}
+
+export interface LeadershipProps {
+  header?: {
+    title?: string;
+    titleHighlight?: string;
+    subtitle?: string;
+  };
+  leaders?: Leader[];
+}
+
+// Default content - used when no database content is provided
+const defaultLeaders: Leader[] = [
+  {
+    name: "Mayank Trivedi",
+    role: "Executive Chairman",
+    type: "Executive Leadership",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/b465df00-e3e7-4e62-b617-07477a09ba7e/Mayank-Trivedi-resized-1767669788661.jpeg?width=8000&height=8000&resize=contain",
+    qualifications: "B.E. Mechanical Engineering",
+    experience: "20+ Years Experience",
+    bio: [
+      "Mayank Trivedi is a seasoned technocrat and visionary leader with over two decades of experience in the healthcare information technology sector. As the Executive Chairman of Cognaium, he brings a proven track record of scaling multinational organizations and delivering mission-critical healthcare solutions globally.",
+      "A Mechanical Engineering graduate from Maharaja Sayajirao University of Baroda, Mayank founded Sysware Healthcare Systems, which grew into a global leader in Laboratory Information Systems and was acquired by Eclipsys Corporation (now part of Allscripts). He subsequently served as President of Eclipsys India, where he led the expansion of operations to over 700 professionals.",
+      "Currently serving as the CEO of myOnsite Healthcare, Mayank leads the strategic integration of Cognaium within the broader MedinovAI ecosystem, focusing on pioneering AI-driven workforce intelligence for clinical environments. His unique blend of engineering excellence and deep healthcare domain expertise ensures Cognaium remains at the forefront of technological innovation."
+    ],
+    highlights: [
+      { icon: "Target", label: "Strategic Vision" },
+      { icon: "Award", label: "Healthcare IT Pioneer" }
+    ]
+  },
   {
     name: "Harita Oza",
     role: "Chief Executive Officer",
@@ -32,8 +74,8 @@ const leaders = [
       "A specialist in driving strategic expansion and fostering cross-functional excellence, Harita is dedicated to building robust frameworks that bridge the gap between technological innovation and financial stability. Under her visionary leadership, Cognaium is pioneering the next generation of AI-driven workforce intelligence."
     ],
     highlights: [
-      { icon: Globe, label: "Global Operations" },
-      { icon: TrendingUp, label: "Strategic Expansion" }
+      { icon: "Globe", label: "Global Operations" },
+      { icon: "TrendingUp", label: "Strategic Expansion" }
     ]
   },
   {
@@ -49,28 +91,39 @@ const leaders = [
       "Beyond corporate leadership, Mr. Mehta is deeply committed to societal well-being, serving as Chairperson of Friends Society and leading impactful CSR initiatives like rebuilding schools and supporting community health. His people-centric leadership and extensive professional network continue to inspire our commitment to organizational excellence and social responsibility."
     ],
     highlights: [
-      { icon: Shield, label: "Governance & Ethics" },
-      { icon: Award, label: "HR Transformation" }
+      { icon: "Shield", label: "Governance & Ethics" },
+      { icon: "Award", label: "HR Transformation" }
     ]
   }
 ];
 
-export function Leadership() {
+const defaultHeader = {
+  title: "Visionary",
+  titleHighlight: "Leadership",
+  subtitle: "Meet the driving force behind Cognaium by MedinovAI's mission to revolutionize workforce intelligence.",
+};
+
+export function Leadership({ header, leaders }: LeadershipProps = {}) {
+  // Merge with defaults
+  const headerData = { ...defaultHeader, ...header };
+  const leadersData = leaders && leaders.length > 0 ? leaders : defaultLeaders;
+
   return (
     <section id="leadership" className="py-24 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">Visionary <span className="gradient-text">Leadership</span></h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet the driving force behind Cognaium by MedinovAI's mission to revolutionize workforce intelligence.
-            </p>
-          </div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+            {headerData.title} <span className="gradient-text">{headerData.titleHighlight}</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            {headerData.subtitle}
+          </p>
+        </div>
 
         <div className="space-y-12">
-          {leaders.map((leader, index) => (
+          {leadersData.map((leader, index) => (
             <div key={leader.name} className="glass rounded-3xl p-8 md:p-12 max-w-5xl mx-auto relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
               
@@ -114,12 +167,15 @@ export function Leadership() {
                   </div>
 
                   <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap gap-6">
-                    {leader.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <highlight.icon className="w-5 h-5 text-accent" />
-                        <span className="text-xs font-semibold uppercase tracking-widest opacity-70">{highlight.label}</span>
-                      </div>
-                    ))}
+                    {leader.highlights.map((highlight, i) => {
+                      const IconComponent = iconMap[highlight.icon] || Award;
+                      return (
+                        <div key={i} className="flex items-center gap-2">
+                          <IconComponent className="w-5 h-5 text-accent" />
+                          <span className="text-xs font-semibold uppercase tracking-widest opacity-70">{highlight.label}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

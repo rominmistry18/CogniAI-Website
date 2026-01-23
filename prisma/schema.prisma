@@ -1,0 +1,243 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// ============================================
+// ROLES TABLE
+// ============================================
+model Role {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  permissions String   // JSON array stored as string
+  createdAt   DateTime @default(now()) @map("created_at")
+  users       User[]
+
+  @@map("roles")
+}
+
+// ============================================
+// USERS TABLE
+// ============================================
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  name         String
+  avatarUrl    String?  @map("avatar_url")
+  roleId       String   @map("role_id")
+  isActive     Boolean  @default(true) @map("is_active")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  role            Role             @relation(fields: [roleId], references: [id])
+  sessions        Session[]
+  blogPosts       BlogPost[]
+  auditLogs       AuditLog[]
+  updatedContent  Content[]        @relation("ContentUpdatedBy")
+  assignedLeads   Lead[]           @relation("LeadAssignedTo")
+  uploadedMedia   Media[]          @relation("MediaUploadedBy")
+  updatedSettings Setting[]        @relation("SettingUpdatedBy")
+  notifications   Notification[]
+
+  @@map("users")
+}
+
+// ============================================
+// SESSIONS TABLE
+// ============================================
+model Session {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  token     String   @unique
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// ============================================
+// CONTENT TABLE (for editable page content)
+// ============================================
+model Content {
+  id          String   @id @default(cuid())
+  pageKey     String   @map("page_key")
+  sectionKey  String   @map("section_key")
+  contentData String   @map("content_data") // JSON stored as string
+  updatedBy   String?  @map("updated_by")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  updater User? @relation("ContentUpdatedBy", fields: [updatedBy], references: [id])
+
+  @@unique([pageKey, sectionKey])
+  @@map("content")
+}
+
+// ============================================
+// LEADS TABLE (contact form submissions)
+// ============================================
+model Lead {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  company    String?
+  phone      String?
+  message    String?
+  source     String   @default("contact_form")
+  status     String   @default("new") // new, contacted, qualified, proposal, won, lost
+  assignedTo String?  @map("assigned_to")
+  notes      String?
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  assignee User? @relation("LeadAssignedTo", fields: [assignedTo], references: [id])
+
+  @@map("leads")
+}
+
+// ============================================
+// BLOG POSTS TABLE
+// ============================================
+model BlogPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  content     String
+  excerpt     String?
+  coverImage  String?   @map("cover_image")
+  authorId    String    @map("author_id")
+  status      String    @default("draft") // draft, published, archived
+  tags        String    @default("[]") // JSON array stored as string
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  author User @relation(fields: [authorId], references: [id])
+
+  @@map("blog_posts")
+}
+
+// ============================================
+// JOBS TABLE (career postings)
+// ============================================
+model Job {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  department   String
+  location     String
+  type         String   // full-time, part-time, contract, internship
+  description  String
+  requirements String
+  salary       String?
+  status       String   @default("draft") // draft, open, closed
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  applications JobApplication[]
+
+  @@map("jobs")
+}
+
+// ============================================
+// JOB APPLICATIONS TABLE
+// ============================================
+model JobApplication {
+  id          String   @id @default(cuid())
+  jobId       String   @map("job_id")
+  name        String
+  email       String
+  phone       String?
+  resumeUrl   String?  @map("resume_url")
+  coverLetter String?  @map("cover_letter")
+  linkedinUrl String?  @map("linkedin_url")
+  status      String   @default("new") // new, reviewing, interview, offer, hired, rejected
+  notes       String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  job Job @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@map("job_applications")
+}
+
+// ============================================
+// MEDIA TABLE
+// ============================================
+model Media {
+  id           String   @id @default(cuid())
+  filename     String
+  originalName String   @map("original_name")
+  url          String
+  type         String   // image/png, application/pdf, etc.
+  size         Int      // in bytes
+  uploadedBy   String?  @map("uploaded_by")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  uploader User? @relation("MediaUploadedBy", fields: [uploadedBy], references: [id])
+
+  @@map("media")
+}
+
+// ============================================
+// SETTINGS TABLE (key-value store)
+// ============================================
+model Setting {
+  key         String   @id
+  value       String   // JSON stored as string
+  description String?
+  updatedBy   String?  @map("updated_by")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  updater User? @relation("SettingUpdatedBy", fields: [updatedBy], references: [id])
+
+  @@map("settings")
+}
+
+// ============================================
+// AUDIT LOGS TABLE
+// ============================================
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?  @map("user_id")
+  action     String   // create, update, delete, login, logout
+  entityType String   @map("entity_type") // user, lead, blog_post, etc.
+  entityId   String?  @map("entity_id")
+  oldValue   String?  @map("old_value") // JSON stored as string
+  newValue   String?  @map("new_value") // JSON stored as string
+  ipAddress  String?  @map("ip_address")
+  userAgent  String?  @map("user_agent")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@map("audit_logs")
+}
+
+// ============================================
+// NOTIFICATIONS TABLE
+// ============================================
+model Notification {
+  id         String   @id @default(cuid())
+  userId     String   @map("user_id")
+  type       String   // lead, application, content, system
+  title      String
+  message    String
+  entityType String?  @map("entity_type") // lead, job_application, etc.
+  entityId   String?  @map("entity_id")
+  isRead     Boolean  @default(false) @map("is_read")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}

@@ -2,7 +2,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### 1. Configure Environment Variables
+
+Copy `.env.example` to `.env` and configure your URLs:
+
+```bash
+# Application URLs (configure in .env)
+WEBSITE_URL=http://localhost:3000
+ADMIN_URL=http://localhost:3001
+
+# For production SEO (canonical URLs, schema.org)
+# NEXT_PUBLIC_WEBSITE_URL=https://yourdomain.com
+```
+
+### 2. Run the Development Server
 
 ```bash
 npm run dev
@@ -14,7 +27,8 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Website: Opens on the port configured in `WEBSITE_URL` (default: http://localhost:3000)
+- Admin Panel: Opens on the port configured in `ADMIN_URL` (default: http://localhost:3001)
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
