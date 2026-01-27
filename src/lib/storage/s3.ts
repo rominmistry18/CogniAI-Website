@@ -13,6 +13,7 @@ const S3_CONFIG = {
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
   region: process.env.AWS_REGION || process.env.AWS_S3_REGION || "us-east-1",
   bucket: process.env.AWS_S3_BUCKET_NAME || process.env.S3_BUCKET || "",
+  prefix: process.env.AWS_S3_PREFIX || "", // Optional: Subfolder prefix (e.g., "website_storage")
   publicUrl: process.env.AWS_S3_PUBLIC_URL || "", // Optional: Custom CDN URL
 };
 
@@ -55,7 +56,10 @@ export async function uploadToS3(
   contentType: string
 ): Promise<{ url: string; key: string }> {
   const client = getS3Client();
-  const key = `media/${filename}`;
+  // Build key with optional prefix: prefix/media/filename or just media/filename
+  const key = S3_CONFIG.prefix 
+    ? `${S3_CONFIG.prefix}/media/${filename}` 
+    : `media/${filename}`;
 
   const command = new PutObjectCommand({
     Bucket: S3_CONFIG.bucket,
